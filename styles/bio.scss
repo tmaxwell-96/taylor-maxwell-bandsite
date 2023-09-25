@@ -1,2 +1,14 @@
 @use './partials/global' ;
 
+.hero {
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .hero__title {
+        color: global.$bandsite-white;
+    }
+}
