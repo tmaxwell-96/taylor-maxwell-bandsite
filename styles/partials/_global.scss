@@ -1,0 +1,91 @@
+$bandsite-black: (#323232);
+$bandsite-silver: (#afafaf);
+$bandsite-white: (#ffffff);
+$bandsite-darkblack: (#000000);
+$bandsite-mercury: (#e1e1e1);
+$bandsite-alabaster: (#FAFAFA);
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Avenir';
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 400;
+    color: $bandsite-white;
+}
+
+h3 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bandsite-black;
+    padding-bottom: 0
+    margin-bottom 0;
+
+    .title {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .nav {
+        width: 100vw;
+    }
+
+    .nav__items {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+        text-align: center;
+
+        .nav__item {
+            text-decoration: none;
+            color: $bandsite-white;
+            width: 50vw;
+            &--active {
+                border-bottom: 2px solid white;
+            }
+        }
+    }
+
+
+}

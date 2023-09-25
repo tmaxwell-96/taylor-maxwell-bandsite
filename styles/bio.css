@@ -1,0 +1,73 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir";
+}
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #323232;
+  padding-bottom: 0 margin-bottom 0;
+}
+.header .title {
+  text-align: center;
+  margin-bottom: 0;
+}
+.header .nav {
+  width: 100vw;
+}
+.header .nav__items {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.header .nav__items .nav__item {
+  text-decoration: none;
+  color: #ffffff;
+  width: 50vw;
+}
+.header .nav__items .nav__item--active {
+  border-bottom: 2px solid white;
+}/*# sourceMappingURL=bio.css.map */
