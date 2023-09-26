@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-  font-size: 1.81rem;
+  font-size: 2.5rem;
   line-height: 4.25rem;
   font-weight: 400;
   color: #ffffff;
@@ -40,9 +40,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  font-weight: 550;
   margin: 0;
 }
 
@@ -90,6 +90,21 @@ h3 {
   color: inherit;
 }
 
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 75vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hero .hero__title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding-left: 2rem;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -98,10 +113,25 @@ h3 {
 }
 .about__title {
   margin: 2rem 0 0.5rem 0;
+  padding-left: 2rem;
+  align-self: flex-start;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 .about__image {
-  width: 90%;
+  width: 95%;
   margin: 1rem 0;
+}
+.about__quote {
+  margin: 0 1rem 0.5rem 1rem;
+}
+.about__band {
+  align-self: flex-start;
+  margin: 0 0 1rem 1rem;
+}
+.about__text {
+  margin: 0 1.5rem 1rem 1rem;
+  font-size: 1.5rem;
 }
 
 .photos {
@@ -114,17 +144,4 @@ h3 {
   display: inline-block;
   width: 90%;
   margin: 1rem 0;
-}
-
-.hero {
-  background-image: url(../assets/images/hero-bio.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 75vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.hero .hero__title {
-  color: #ffffff;
 }/*# sourceMappingURL=bio.css.map */

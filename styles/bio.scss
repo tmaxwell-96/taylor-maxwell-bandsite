@@ -10,5 +10,51 @@
     align-items: center;
     .hero__title {
         color: global.$bandsite-white;
+        font-size: 2.5rem;
+        padding-left: 2rem;
     }
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        margin: 2rem 0 0.5rem 0; 
+        padding-left: 2rem;
+        align-self: flex-start;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    &__image {
+        width: 95%;
+        margin: 1rem 0;
+    }
+    &__quote {
+        margin: 0 1rem 0.5rem 1rem;
+    }
+    &__band {
+        align-self: flex-start;
+        margin: 0 0 1rem 1rem;
+    }
+
+    &__text {
+        margin: 0 1.5rem 1rem 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+.photos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__images {
+        display: inline-block;
+        width: 90%;
+        margin: 1rem 0;
+    }
+
 }
