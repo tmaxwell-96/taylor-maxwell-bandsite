@@ -47,10 +47,17 @@
 }
 
 .photos {
+    background-color: global.$bandsite-alabaster;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 550;
+        align-self: flex-start;
+        margin: 2rem 2rem 1rem 2rem;
+    }
     &__images {
         display: inline-block;
         width: 90%;

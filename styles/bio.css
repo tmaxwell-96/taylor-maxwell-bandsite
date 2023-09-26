@@ -135,10 +135,17 @@ h3 {
 }
 
 .photos {
+  background-color: #FAFAFA;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+.photos__title {
+  font-size: 2.5rem;
+  font-weight: 550;
+  align-self: flex-start;
+  margin: 2rem 2rem 1rem 2rem;
 }
 .photos__images {
   display: inline-block;
