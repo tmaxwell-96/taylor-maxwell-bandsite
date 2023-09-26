@@ -90,6 +90,16 @@ h3 {
   color: inherit;
 }
 
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
