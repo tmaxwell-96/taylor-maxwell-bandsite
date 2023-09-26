@@ -38,11 +38,13 @@
     &__band {
         align-self: flex-start;
         margin: 0 0 1rem 1rem;
+        font-weight: 450;
     }
 
     &__text {
         margin: 0 1.5rem 1rem 1rem;
         font-size: 1.5rem;
+        line-height: 1.50;
         color: global.$bandsite-black;
     }
 }

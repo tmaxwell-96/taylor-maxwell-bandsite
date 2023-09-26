@@ -56,7 +56,7 @@ h3 {
 }
 .header .title {
   text-align: center;
-  margin-bottom: 0;
+  margin: 1rem 0 0 0;
 }
 .header .nav {
   width: 100vw;
@@ -99,6 +99,15 @@ h3 {
   justify-content: space-around;
   align-items: flex-start;
 }
+.footer__title {
+  font-size: 2.5rem;
+  font-weight: 550;
+  margin: 1rem 0 2rem 0;
+}
+.footer__image {
+  height: 2.75rem;
+  margin: 0 2rem 0 0;
+}
 .footer__site {
   font-size: 2.5rem;
   line-height: 4.25rem;
@@ -107,20 +116,20 @@ h3 {
   margin-top: 5rem;
 }
 .footer__card {
-  margin: 1rem;
+  margin: 0.75rem 0.75rem 0.75rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
 .footer__text {
-  margin: 0;
+  margin: 0.25rem 0;
 }
 .footer__text--bold {
   font-weight: 700;
 }
 .footer .card__top, .footer .card__middle {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .hero {
@@ -161,10 +170,12 @@ h3 {
 .about__band {
   align-self: flex-start;
   margin: 0 0 1rem 1rem;
+  font-weight: 450;
 }
 .about__text {
   margin: 0 1.5rem 1rem 1rem;
   font-size: 1.5rem;
+  line-height: 1.5;
   color: #323232;
 }
 
