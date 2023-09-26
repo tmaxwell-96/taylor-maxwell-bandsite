@@ -99,6 +99,29 @@ h3 {
   justify-content: space-around;
   align-items: flex-start;
 }
+.footer__site {
+  font-size: 2.5rem;
+  line-height: 4.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 5rem;
+}
+.footer__card {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__text {
+  margin: 0;
+}
+.footer__text--bold {
+  font-weight: 700;
+}
+.footer .card__top, .footer .card__middle {
+  margin: 1rem 0;
+}
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
@@ -142,6 +165,7 @@ h3 {
 .about__text {
   margin: 0 1.5rem 1rem 1rem;
   font-size: 1.5rem;
+  color: #323232;
 }
 
 .photos {

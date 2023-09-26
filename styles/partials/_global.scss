@@ -115,4 +115,27 @@ h3 {
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    &__site {
+        font-size: 2.5rem;
+        line-height: 4.25rem;
+        font-weight: 400;
+        color: $bandsite-white;
+        margin-top: 5rem;
+    }
+    &__card {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__text {
+        margin: 0;
+        &--bold {
+            font-weight: 700;
+        }
+    }
+    .card__top, .card__middle {
+        margin: 1rem 0;
+    }
 }
