@@ -95,8 +95,12 @@ h3 {
   align-items: center;
   justify-content: space-between;
 }
+.about__title {
+  margin: 2rem 0 0.5rem 0;
+}
 .about__image {
   width: 90%;
+  margin: 1rem 0;
 }
 
 .photos {
