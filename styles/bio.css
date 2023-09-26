@@ -140,6 +140,15 @@ h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+}
+.hero .hero__overlay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(50, 50, 50, 0.3137254902);
+  height: 100%;
+  width: 100%;
 }
 .hero .hero__title {
   color: #ffffff;
