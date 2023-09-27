@@ -27,7 +27,7 @@ $bandsite-alabaster: (#FAFAFA);
 }
 
 @mixin tablet {
-    @media (min-width: 767px) {
+    @media (min-width: 768px) {
         @content;
     }
 }

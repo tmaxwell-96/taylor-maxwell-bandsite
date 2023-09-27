@@ -4,11 +4,14 @@
     background-image: url(../assets/images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
-    height: 75vh;
+    height: 30vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    @include global.tablet {
+        height: 50vh;
+    }
     .hero__overlay {
         display: flex;
         align-items: center;
@@ -30,6 +33,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include global.tablet {
+            flex-direction: row;
+        }
+    }
     &__title {
         margin: 2rem 0 0.5rem 0; 
         padding-left: 2rem;
@@ -40,13 +52,17 @@
     &__image {
         width: 95%;
         margin: 1rem 0;
+        @include global.tablet {
+            width: 80%;
+        }
     }
     &__quote {
         margin: 0 1rem 0.5rem 1rem;
+        align-self: flex-start;
     }
     &__band {
         align-self: flex-start;
-        margin: 0 0 1rem 1rem;
+        margin: 1rem 0 1rem 1rem;
         font-weight: 450;
     }
 
@@ -55,15 +71,26 @@
         font-size: 1.5rem;
         line-height: 1.50;
         color: global.$bandsite-black;
+        @include global.tablet {
+            margin: 1.5rem;
+        }
     }
 }
 
 .photos {
     background-color: global.$bandsite-alabaster;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include global.tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+    }
+
     &__title {
         font-size: 2.5rem;
         font-weight: 550;
@@ -74,6 +101,9 @@
         display: inline-block;
         width: 90%;
         margin: 1rem 0;
+        @include global.tablet {
+            width: 29%;
+        }
     }
 
 }
