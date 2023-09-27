@@ -3,178 +3,222 @@ $bandsite-silver: (#afafaf);
 $bandsite-white: (#ffffff);
 $bandsite-darkblack: (#000000);
 $bandsite-mercury: (#e1e1e1);
-$bandsite-alabaster: (#FAFAFA);
+$bandsite-alabaster: (#fafafa);
 
 @font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
-    font-weight: 400;
-    font-style: normal;
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
-    font-weight: 700;
-    font-style: normal;
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: Avenir;
-    src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
-    font-weight: 600;
-    font-style: normal;
+  font-family: Avenir;
+  src: url(../../assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+  font-style: normal;
 }
 
 @mixin tablet {
-    @media (min-width: 768px) {
-        @content;
-    }
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-    font-family: 'Avenir';
+  font-family: "Avenir";
 }
 
 h1 {
+  font-size: 2.5rem;
+  line-height: 4.25rem;
+  font-weight: 400;
+  color: $bandsite-white;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 3rem;
+  font-weight: 550;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $bandsite-black;
+  padding-bottom: 0 margin-bottom 0;
+
+  .title {
+    text-align: center;
+    margin: 1rem 0 0 0;
+    display: inline-block;
+    border: 7px solid rgba(0, 0, 0, 0);
+  }
+
+  .nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .nav__items {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    @include tablet {
+      width: 50%;
+      align-self: flex-end;
+    }
+
+    .nav__item {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-decoration: none;
+      text-align: center;
+      color: $bandsite-white;
+      width: 100%;
+      margin: 0;
+      padding-bottom: 1rem;
+      @include tablet {
+        width: auto;
+        align-items: flex-start;
+      }
+      &--active {
+        border-bottom: 7px white solid;
+      }
+      .nav__link {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $bandsite-black;
+  color: $bandsite-white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 550;
+    margin: 0 0 1rem 0;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include tablet {
+      justify-self: flex-start;
+      margin-left: 3rem;
+    }
+  }
+
+  &__image {
+    height: 2.75rem;
+    margin: 0 2rem 0 0;
+  }
+  &__site {
     font-size: 2.5rem;
     line-height: 4.25rem;
     font-weight: 400;
     color: $bandsite-white;
-}
-
-h2 {
-    font-size: 1.5rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-h3 {
-    font-size: 1.75rem;
-    line-height: 3rem;
-    font-weight: 550;
-    margin: 0;
-}
-
-
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: $bandsite-black;
-    padding-bottom: 0
-    margin-bottom 0;
-
-
-    .title {
-        text-align: center;
-        margin: 1rem 0 0 0 ;
+    margin-top: 5rem;
+    &--top {
+      display: none;
+      @include tablet {
         display: inline-block;
-        border: 7px solid rgba(0, 0, 0, 0);
-
+        margin: 0 0 auto auto;
+      }
     }
-
-    .nav {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-            width: 50%;
-            margin: 0 0 0 1rem;
-        }
-
+    &--bottom {
+      display: inline-block;
+      @include tablet {
+        display: none;
+      }
     }
+  }
 
-    .nav__items {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-        width: 100%;
-        margin-bottom: 0;
-        text-align: center;
-        @include tablet {
-            width: 50%;
-            align-self: flex-end;
-        }
-
-
-        .nav__item {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            text-decoration: none;
-            text-align: center;
-            color: $bandsite-white;
-            width: 100%;
-            margin: 0;
-            padding-bottom: 1rem;
-            @include tablet {
-                width: auto;
-                align-items: flex-start;
-            }
-            &--active {
-                border-bottom: 7px white solid;
-            }
-            .nav__link {
-                text-decoration: none;
-                color: inherit;
-            }
-
-        }
-    }
-}
-
-.footer {
-    background-color: $bandsite-black;
-    color: $bandsite-white;
-    padding: 1rem;
+  &__cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
-    &__title {
-        font-size: 2.5rem;
-        font-weight: 550;
-        margin: 1rem 0 2rem 0;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      max-width: 49.25rem;
     }
-
-    &__image {
-        height: 2.75rem;
-        margin: 0 2rem 0 0;
+  }
+  &__card {
+    margin: 0.75rem 0.75rem 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__text {
+    margin: 0.25rem 0;
+    &--bold {
+      font-weight: 700;
     }
-    &__site {
-        font-size: 2.5rem;
-        line-height: 4.25rem;
-        font-weight: 400;
-        color: $bandsite-white;
-        margin-top: 5rem;
-    }
-    &__card {
-        margin: 0.75rem 0.75rem 0.75rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    &__text {
-        margin: 0.25rem 0;
-        &--bold {
-            font-weight: 700;
-        }
-    }
-    .card__top, .card__middle {
-        margin: 0.5rem 0;
-    }
+  }
+  .card__top,
+  .card__middle {
+    margin: 0.5rem 0;
+  }
+  &__copyright {
+    margin: 1rem 0 0 0;
+  }
 }
