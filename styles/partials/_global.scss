@@ -85,7 +85,7 @@ h3 {
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
-      width: 50%;
+      width: 50vw;
       margin: 0 0 0 1rem;
     }
   }
@@ -117,6 +117,7 @@ h3 {
       @include tablet {
         width: auto;
         align-items: flex-start;
+        margin: 0 2rem;
       }
       &--active {
         border-bottom: 7px white solid;
