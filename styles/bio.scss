@@ -9,6 +9,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
+
   @include global.tablet {
     height: 50vh;
   }
@@ -19,11 +20,17 @@
     background-color: #32323250;
     height: 100%;
     width: 100%;
+    padding: 1rem;
   }
   .hero__title {
     color: global.$bandsite-white;
     font-size: 2.5rem;
-    padding-left: 2rem;
+    @include global.tablet {
+      margin-left: 2rem;
+    }
+    @include global.desktop {
+      margin-left: 10rem;
+    }
   }
 }
 
@@ -32,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
   &__content {
     padding: 2rem 1rem;
     display: flex;
@@ -53,7 +61,6 @@
   }
   &__title {
     margin: 2rem 0 0.5rem 0;
-    padding-left: 2rem;
     align-self: flex-start;
     font-size: 2.5rem;
     font-weight: 600;
@@ -90,7 +97,7 @@
 
 .photos {
   background-color: global.$bandsite-alabaster;
-  padding-top: 1rem;
+  padding: 1rem 1rem;
   &__container {
     display: flex;
     flex-direction: column;

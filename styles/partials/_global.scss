@@ -32,6 +32,11 @@ $bandsite-alabaster: (#fafafa);
   }
 }
 
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,7 +76,7 @@ h3 {
 
   .title {
     text-align: center;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 2rem;
     display: inline-block;
     border: 7px solid rgba(0, 0, 0, 0);
   }
@@ -86,7 +91,12 @@ h3 {
       flex-direction: row;
       justify-content: space-between;
       width: 50vw;
-      margin: 0 0 0 1rem;
+    }
+    @include desktop {
+      height: 8vh;
+      width: 40vw;
+      justify-content: flex-start;
+      margin-left: 10rem;
     }
   }
 
@@ -133,11 +143,11 @@ h3 {
 .footer {
   background-color: $bandsite-black;
   color: $bandsite-white;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  padding: 2rem;
   &__top {
     display: flex;
     flex-direction: column;
