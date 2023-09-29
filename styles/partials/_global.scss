@@ -186,6 +186,9 @@ p {
   justify-content: space-around;
   align-items: flex-start;
   padding: 1rem;
+  @include tablet {
+    padding: 2rem;
+  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -200,6 +203,17 @@ p {
   &__title {
     font-weight: 550;
     margin: 0 0 1rem 0;
+    display: inline-block;
+    @include tablet {
+      display: none;
+    }
+    &--wide {
+      display: none;
+      @include tablet {
+        display: inline-block;
+        margin: 0;
+      }
+    }
   }
 
   &__socials {
@@ -209,6 +223,14 @@ p {
     @include tablet {
       justify-self: flex-start;
       margin-left: 3rem;
+      display: none;
+    }
+    &--wide {
+      display: none;
+      @include tablet {
+        display: inline-block;
+        margin: 0;
+      }
     }
   }
 
@@ -220,7 +242,7 @@ p {
     font-weight: 400;
     color: $bandsite-white;
     margin-top: 2.5rem;
-    &--top {
+    &--wide {
       display: none;
       @include tablet {
         display: inline-block;
@@ -245,7 +267,7 @@ p {
     align-items: flex-start;
     @include tablet {
       flex-direction: row;
-      align-items: center;
+      align-items: flex-end;
       width: 100%;
       max-width: 49.25rem;
     }
@@ -256,15 +278,21 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    @include tablet {
+      justify-content: flex-end;
+    }
   }
   &__text {
     &--bold {
       font-weight: 600;
     }
   }
-  .card__top,
   .card__middle {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
+  }
+
+  .card__top-text {
+    margin-top: 2rem;
   }
   &__copyright {
     margin: 1rem 0 0 0;
