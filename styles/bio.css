@@ -26,24 +26,29 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  line-height: 4.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 400;
   color: #ffffff;
 }
 
 h2 {
   font-size: 1.5rem;
-  line-height: 2.75rem;
+  line-height: 2rem;
   font-weight: 700;
   margin: 0;
 }
 
 h3 {
-  font-size: 1.75rem;
-  line-height: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 550;
   margin: 0;
+}
+
+p {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
 }
 
 .header {
@@ -130,7 +135,7 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 2rem;
+  padding: 1rem;
 }
 .footer__top {
   display: flex;
@@ -146,7 +151,6 @@ h3 {
   }
 }
 .footer__title {
-  font-size: 2.5rem;
   font-weight: 550;
   margin: 0 0 1rem 0;
 }
@@ -162,15 +166,13 @@ h3 {
   }
 }
 .footer__image {
-  height: 2.75rem;
+  height: 1.5rem;
   margin: 0 2rem 0 0;
 }
 .footer__site {
-  font-size: 2.5rem;
-  line-height: 4.25rem;
   font-weight: 400;
   color: #ffffff;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
 .footer__site--top {
   display: none;
@@ -210,9 +212,6 @@ h3 {
   justify-content: space-between;
   align-items: flex-start;
 }
-.footer__text {
-  margin: 0.25rem 0;
-}
 .footer__text--bold {
   font-weight: 700;
 }
@@ -250,7 +249,8 @@ h3 {
 }
 .hero .hero__title {
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media (min-width: 768px) {
   .hero .hero__title {
@@ -271,7 +271,6 @@ h3 {
   padding: 1rem;
 }
 .about__content {
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -294,13 +293,14 @@ h3 {
   }
 }
 .about__title {
-  margin: 2rem 0 0.5rem 0;
+  margin: 0.5rem 0 0rem 0;
   align-self: flex-start;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
 }
 .about__image {
-  width: 95%;
+  width: 100%;
   margin: 1rem 0;
   align-self: center;
 }
@@ -310,7 +310,7 @@ h3 {
   }
 }
 .about__quote {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   align-self: flex-start;
 }
 .about__band {
@@ -319,8 +319,8 @@ h3 {
   margin: 1rem 0;
 }
 .about__text {
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   color: #323232;
   margin-bottom: 2rem;
 }
@@ -349,14 +349,13 @@ h3 {
   }
 }
 .photos__title {
-  font-size: 2.5rem;
   font-weight: 550;
   align-self: flex-start;
-  margin: 2rem 2rem 1rem 2rem;
+  margin: 0;
 }
 .photos__images {
   display: inline-block;
-  width: 90%;
+  width: 100%;
   margin: 1rem 0;
 }
 @media (min-width: 768px) {
