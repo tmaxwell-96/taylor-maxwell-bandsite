@@ -4,30 +4,33 @@
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 30vh;
+  height: 25vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
-
   @include global.tablet {
-    height: 50vh;
+    height: 45vh;
   }
   .hero__overlay {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #32323250;
+    background-color: rgba($color: #323232, $alpha: 0.5);
     height: 100%;
     width: 100%;
     padding: 1rem;
+    @include global.tablet {
+      padding: 2rem;
+    }
   }
   .hero__title {
     color: global.$bandsite-white;
     font-size: 1.5rem;
     line-height: 2rem;
+    font-weight: 600;
     @include global.tablet {
-      margin-left: 2rem;
+      font-size: 3.75rem;
     }
     @include global.desktop {
       margin-left: 10rem;
@@ -41,13 +44,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  @include global.tablet {
+    padding: 2rem;
+  }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     @include global.tablet {
-      padding: 2rem 5rem;
+      padding: 1rem 3rem;
     }
   }
   &__container {
@@ -62,8 +68,6 @@
   &__title {
     margin: 0.5rem 0 0rem 0;
     align-self: flex-start;
-    font-size: 1.5rem;
-    line-height: 2rem;
     font-weight: 600;
   }
   &__image {
@@ -71,16 +75,22 @@
     margin: 1rem 0;
     align-self: center;
     @include global.tablet {
-      width: 100;
+      margin: 0 0 1rem 0;
     }
   }
   &__quote {
     margin-bottom: 1rem;
     align-self: flex-start;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &__reference {
+    font-size: 1rem;
   }
   &__band {
     align-self: flex-start;
-    font-weight: 450;
+    font-weight: 550;
     margin: 1rem 0;
   }
 
@@ -88,7 +98,7 @@
     font-size: 0.8125rem;
     line-height: 1.125rem;
     color: global.$bandsite-black;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     @include global.tablet {
       margin-right: 2rem;
       margin-bottom: 0;
@@ -99,6 +109,9 @@
 .photos {
   background-color: global.$bandsite-alabaster;
   padding: 1rem 1rem;
+  @include global.tablet {
+    padding: 2rem;
+  }
   &__container {
     display: flex;
     flex-direction: column;
@@ -107,7 +120,6 @@
     @include global.tablet {
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 2rem;
     }
   }
 
@@ -115,11 +127,14 @@
     font-weight: 550;
     align-self: flex-start;
     margin: 0;
+    @include global.tablet {
+      margin-bottom: 1rem;
+    }
   }
   &__images {
     display: inline-block;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     @include global.tablet {
       width: 29%;
     }

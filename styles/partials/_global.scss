@@ -51,6 +51,10 @@ h1 {
   line-height: 2rem;
   font-weight: 400;
   color: $bandsite-white;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 h2 {
@@ -58,6 +62,10 @@ h2 {
   line-height: 2rem;
   font-weight: 700;
   margin: 0;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 
 h3 {
@@ -65,11 +73,20 @@ h3 {
   line-height: 1.375rem;
   font-weight: 550;
   margin: 0;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
 }
 
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875;
+    line-height: 1.25;
+  }
 }
 
 .header {
@@ -78,16 +95,20 @@ p {
   justify-content: center;
   background-color: $bandsite-black;
   padding-bottom: 0 margin-bottom 0;
+  @include tablet {
+    padding: 0 2rem;
+    height: 7vh;
+    justify-content: flex-end;
+  }
 
   .title {
     text-align: center;
-    margin: 1rem 0 0 2rem;
     display: inline-block;
-    border: 7px solid rgba(0, 0, 0, 0);
+    border: 4px solid rgba(0, 0, 0, 0);
+    margin-bottom: 0.5625rem;
   }
 
   .nav {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +116,7 @@ p {
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
+      height: 100%;
       width: 50vw;
     }
     @include desktop {
@@ -116,6 +138,7 @@ p {
     text-align: center;
     @include tablet {
       width: 50%;
+      height: 100%;
       align-self: flex-end;
     }
 
@@ -131,15 +154,25 @@ p {
       padding-bottom: 1rem;
       @include tablet {
         width: auto;
-        align-items: flex-start;
+        height: 100%;
+        align-items: center;
         margin: 0 2rem;
+        padding-bottom: 0;
       }
       &--active {
-        border-bottom: 7px white solid;
+        border-bottom: 4px white solid;
       }
       .nav__link {
         text-decoration: none;
         color: inherit;
+        font-weight: 500;
+        @include tablet {
+          font-size: 1.2rem;
+        }
+
+        &--active {
+          font-weight: 600;
+        }
       }
     }
   }
@@ -192,6 +225,9 @@ p {
       @include tablet {
         display: inline-block;
         margin: 0 0 auto auto;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
       }
     }
     &--bottom {
@@ -223,7 +259,7 @@ p {
   }
   &__text {
     &--bold {
-      font-weight: 700;
+      font-weight: 600;
     }
   }
   .card__top,
