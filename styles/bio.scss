@@ -80,7 +80,7 @@
     margin: 1rem 0;
     align-self: center;
     @include global.tablet {
-      margin: 0 0 1rem 0;
+      margin: 0 0 2rem 0;
     }
   }
   &__quote {
@@ -92,6 +92,7 @@
 
   &__reference {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
   &__band {
     align-self: flex-start;

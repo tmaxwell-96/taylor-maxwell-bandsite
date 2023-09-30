@@ -95,16 +95,20 @@ p {
     padding-left: 8rem;
   }
 }
-.header .title {
+.header__title {
   text-align: center;
   display: inline-block;
   border: 4px solid rgba(0, 0, 0, 0);
   margin-bottom: 0.5625rem;
 }
 @media (min-width: 768px) {
-  .header .title {
+  .header__title {
     margin-right: 1rem;
   }
+}
+.header__link {
+  color: #ffffff;
+  text-decoration: none;
 }
 .header .nav {
   display: flex;
@@ -197,6 +201,7 @@ p {
 @media (min-width: 1280px) {
   .footer {
     padding: 2rem 8rem;
+    position: relative;
   }
 }
 .footer__top {
@@ -256,6 +261,11 @@ p {
   height: 1.5rem;
   margin: 0 2rem 0 0;
 }
+.footer__link {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
 .footer__site {
   font-weight: 400;
   color: #ffffff;
@@ -271,6 +281,13 @@ p {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__site--wide {
+    position: absolute;
+    top: 11%;
+    right: 8%;
   }
 }
 .footer__site--bottom {
@@ -421,7 +438,7 @@ p {
 }
 @media (min-width: 768px) {
   .about__image {
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
   }
 }
 .about__quote {
@@ -432,6 +449,7 @@ p {
 }
 .about__reference {
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 .about__band {
   align-self: flex-start;
