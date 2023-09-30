@@ -23,6 +23,9 @@
     @include global.tablet {
       padding: 2rem;
     }
+    @include global.desktop {
+      padding: 8rem;
+    }
   }
   .hero__title {
     color: global.$bandsite-white;
@@ -33,7 +36,6 @@
       font-size: 3.75rem;
     }
     @include global.desktop {
-      margin-left: 10rem;
     }
   }
 }
@@ -46,6 +48,9 @@
   padding: 1rem;
   @include global.tablet {
     padding: 2rem;
+  }
+  @include global.desktop {
+    padding: 2rem 8rem;
   }
   &__content {
     display: flex;
@@ -111,6 +116,9 @@
   padding: 1rem 1rem;
   @include global.tablet {
     padding: 2rem;
+  }
+  @include global.desktop {
+    padding: 2rem 8rem;
   }
   &__container {
     display: flex;

@@ -100,12 +100,18 @@ p {
     height: 7vh;
     justify-content: flex-end;
   }
+  @include desktop {
+    padding-left: 8rem;
+  }
 
   .title {
     text-align: center;
     display: inline-block;
     border: 4px solid rgba(0, 0, 0, 0);
     margin-bottom: 0.5625rem;
+    @include tablet {
+      margin-right: 1rem;
+    }
   }
 
   .nav {
@@ -115,22 +121,20 @@ p {
     justify-content: center;
     @include tablet {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       height: 100%;
       width: 50vw;
     }
     @include desktop {
       height: 8vh;
-      width: 40vw;
       justify-content: flex-start;
-      margin-left: 10rem;
     }
   }
 
   .nav__items {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 0;
     width: 100%;
@@ -156,7 +160,7 @@ p {
         width: auto;
         height: 100%;
         align-items: center;
-        margin: 0 2rem;
+        margin: 0 1rem;
         padding-bottom: 0;
       }
       &--active {
@@ -188,6 +192,9 @@ p {
   padding: 1rem;
   @include tablet {
     padding: 2rem;
+  }
+  @include desktop {
+    padding: 2rem 8rem;
   }
   &__top {
     display: flex;
@@ -296,5 +303,8 @@ p {
   }
   &__copyright {
     margin: 1rem 0 0 0;
+    @include tablet {
+      margin: 2rem 0 0 0;
+    }
   }
 }

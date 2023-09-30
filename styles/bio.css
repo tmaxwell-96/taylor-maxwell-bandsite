@@ -90,11 +90,21 @@ p {
     justify-content: flex-end;
   }
 }
+@media (min-width: 1280px) {
+  .header {
+    padding-left: 8rem;
+  }
+}
 .header .title {
   text-align: center;
   display: inline-block;
   border: 4px solid rgba(0, 0, 0, 0);
   margin-bottom: 0.5625rem;
+}
+@media (min-width: 768px) {
+  .header .title {
+    margin-right: 1rem;
+  }
 }
 .header .nav {
   display: flex;
@@ -105,7 +115,7 @@ p {
 @media (min-width: 768px) {
   .header .nav {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
     width: 50vw;
   }
@@ -113,15 +123,13 @@ p {
 @media (min-width: 1280px) {
   .header .nav {
     height: 8vh;
-    width: 40vw;
     justify-content: flex-start;
-    margin-left: 10rem;
   }
 }
 .header .nav__items {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 0;
   width: 100%;
@@ -151,7 +159,7 @@ p {
     width: auto;
     height: 100%;
     align-items: center;
-    margin: 0 2rem;
+    margin: 0 1rem;
     padding-bottom: 0;
   }
 }
@@ -184,6 +192,11 @@ p {
 @media (min-width: 768px) {
   .footer {
     padding: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 2rem 8rem;
   }
 }
 .footer__top {
@@ -306,6 +319,11 @@ p {
 .footer__copyright {
   margin: 1rem 0 0 0;
 }
+@media (min-width: 768px) {
+  .footer__copyright {
+    margin: 2rem 0 0 0;
+  }
+}
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
@@ -336,6 +354,11 @@ p {
     padding: 2rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero .hero__overlay {
+    padding: 8rem;
+  }
+}
 .hero .hero__title {
   color: #ffffff;
   font-size: 1.5rem;
@@ -347,12 +370,6 @@ p {
     font-size: 3.75rem;
   }
 }
-@media (min-width: 1280px) {
-  .hero .hero__title {
-    margin-left: 10rem;
-  }
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -363,6 +380,11 @@ p {
 @media (min-width: 768px) {
   .about {
     padding: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about {
+    padding: 2rem 8rem;
   }
 }
 .about__content {
@@ -436,6 +458,11 @@ p {
 @media (min-width: 768px) {
   .photos {
     padding: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .photos {
+    padding: 2rem 8rem;
   }
 }
 .photos__container {
