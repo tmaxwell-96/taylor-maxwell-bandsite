@@ -229,7 +229,7 @@ p {
     }
   }
 
-  &__socials {
+  &__socials-top {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -311,11 +311,11 @@ p {
       font-weight: 600;
     }
   }
-  .card__middle {
+  .footer__middle {
     margin: 1.5rem 0;
   }
 
-  .card__top-text {
+  .footer__top-text {
     margin-top: 1rem;
     @include tablet {
       margin-top: 2rem;
