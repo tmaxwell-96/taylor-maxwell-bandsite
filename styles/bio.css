@@ -81,7 +81,7 @@ p {
   flex-direction: column;
   justify-content: center;
   background-color: #323232;
-  padding-bottom: 0 margin-bottom 0;
+  padding: 1rem 0 0 0;
 }
 @media (min-width: 768px) {
   .header {
@@ -103,7 +103,7 @@ p {
 }
 @media (min-width: 768px) {
   .header__title {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 }
 .header__link {
@@ -313,7 +313,7 @@ p {
   }
 }
 .footer__card {
-  margin: 0.75rem 0.75rem 0.75rem 0;
+  margin: 0.5rem 0.75rem 0.75rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -331,7 +331,12 @@ p {
   margin: 1.5rem 0;
 }
 .footer .card__top-text {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer .card__top-text {
+    margin-top: 2rem;
+  }
 }
 .footer__copyright {
   margin: 1rem 0 0 0;
@@ -445,7 +450,17 @@ p {
   margin-bottom: 1rem;
   align-self: flex-start;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .about__quote {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .about__quote {
+    width: 80%;
+  }
 }
 .about__reference {
   font-size: 1rem;
@@ -457,8 +472,6 @@ p {
   margin: 1rem 0;
 }
 .about__text {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
   color: #323232;
   margin-bottom: 1rem;
 }
@@ -466,6 +479,8 @@ p {
   .about__text {
     margin-right: 2rem;
     margin-bottom: 0;
+    font-size: 0.875rem;
+    line-height: 1.25;
   }
 }
 

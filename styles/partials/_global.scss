@@ -94,7 +94,7 @@ p {
   flex-direction: column;
   justify-content: center;
   background-color: $bandsite-black;
-  padding-bottom: 0 margin-bottom 0;
+  padding: 1rem 0 0 0;
   @include tablet {
     padding: 0 2rem;
     height: 7vh;
@@ -110,7 +110,7 @@ p {
     border: 4px solid rgba(0, 0, 0, 0);
     margin-bottom: 0.5625rem;
     @include tablet {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
   }
 
@@ -297,7 +297,7 @@ p {
     }
   }
   &__card {
-    margin: 0.75rem 0.75rem 0.75rem 0;
+    margin: 0.5rem 0.75rem 0.75rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -316,7 +316,10 @@ p {
   }
 
   .card__top-text {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    @include tablet {
+      margin-top: 2rem;
+    }
   }
   &__copyright {
     margin: 1rem 0 0 0;

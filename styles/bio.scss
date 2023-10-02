@@ -87,7 +87,13 @@
     margin-bottom: 1rem;
     align-self: flex-start;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    @include global.tablet {
+      font-size: 1.5rem;
+    }
+    @include global.desktop {
+      width: 80%;
+    }
   }
 
   &__reference {
@@ -101,13 +107,13 @@
   }
 
   &__text {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
     color: global.$bandsite-black;
     margin-bottom: 1rem;
     @include global.tablet {
       margin-right: 2rem;
       margin-bottom: 0;
+      font-size: 0.875rem;
+      line-height: 1.25;
     }
   }
 }
