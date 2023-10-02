@@ -1,0 +1,54 @@
+@use "./partials/global";
+
+.hero {
+  background-image: url(../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  @include global.tablet {
+  }
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba($color: #323232, $alpha: 0.5);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    @include global.tablet {
+      padding: 2rem;
+    }
+    @include global.desktop {
+      padding: 8rem;
+    }
+  }
+  &__soundcloud-container {
+    margin: 1rem 0;
+    width: 90%;
+  }
+  &__album {
+    align-self: flex-start;
+    color: global.$bandsite-white;
+  }
+  &__title {
+    color: global.$bandsite-white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    width: 65%;
+    align-self: flex-start;
+    @include global.tablet {
+      font-size: 3.75rem;
+    }
+    @include global.desktop {
+    }
+  }
+}
+
+.shows {
+  padding: 1rem;
+}
