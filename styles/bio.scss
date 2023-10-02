@@ -12,7 +12,7 @@
   @include global.tablet {
     height: 45vh;
   }
-  .hero__overlay {
+  &__overlay {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -27,7 +27,7 @@
       padding: 8rem;
     }
   }
-  .hero__title {
+  &__title {
     color: global.$bandsite-white;
     font-size: 1.5rem;
     line-height: 2rem;
