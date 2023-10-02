@@ -117,6 +117,9 @@ p {
   &__link {
     color: $bandsite-white;
     text-decoration: none;
+    &:hover {
+      color: rgb(187, 140, 187);
+    }
   }
 
   .nav {
@@ -149,6 +152,21 @@ p {
         align-self: flex-end;
       }
     }
+    &__link {
+      text-decoration: none;
+      color: $bandsite-white;
+      font-weight: 500;
+      &:hover {
+        color: rgb(187, 140, 187);
+      }
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      &--active {
+        font-weight: 600;
+      }
+    }
     &__item {
       display: flex;
       justify-content: center;
@@ -168,18 +186,6 @@ p {
       }
       &--active {
         border-bottom: 4px white solid;
-      }
-      .nav__link {
-        text-decoration: none;
-        color: inherit;
-        font-weight: 500;
-        @include tablet {
-          font-size: 1.2rem;
-        }
-
-        &--active {
-          font-weight: 600;
-        }
       }
     }
   }
@@ -254,6 +260,9 @@ p {
     display: inline-block;
     color: $bandsite-white;
     text-decoration: none;
+    &:hover {
+      color: rgb(187, 140, 187);
+    }
   }
   &__site {
     font-weight: 400;
