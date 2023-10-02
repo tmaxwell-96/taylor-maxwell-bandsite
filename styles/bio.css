@@ -336,6 +336,13 @@ p {
 .footer__text--bold {
   font-weight: 600;
 }
+.footer__email {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__email:hover {
+  color: rgb(187, 140, 187);
+}
 .footer__middle {
   margin: 1.5rem 0;
 }
@@ -533,6 +540,10 @@ p {
   display: inline-block;
   width: 100%;
   margin: 0.5rem 0;
+  filter: grayscale(100%);
+}
+.photos__images:hover {
+  filter: grayscale(0%);
 }
 @media (min-width: 768px) {
   .photos__images {

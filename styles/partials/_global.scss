@@ -319,6 +319,14 @@ p {
     }
   }
 
+  &__email {
+    color: $bandsite-white;
+    text-decoration: none;
+    &:hover {
+      color: rgb(187, 140, 187);
+    }
+  }
+
   &__middle {
     margin: 1.5rem 0;
   }
