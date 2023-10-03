@@ -52,3 +52,35 @@
 .shows {
   padding: 1rem;
 }
+
+.cards {
+  &__divider {
+    border-bottom: 5px solid global.$bandsite-mercury;
+    width: 100vw;
+  }
+}
+
+.card {
+  &__top,
+  &__middle,
+  &__bottom {
+    padding: 0.75rem 0;
+  }
+  &__text--light {
+    color: global.$bandsite-silver;
+  }
+  &__text--bold {
+    font-weight: 700;
+  }
+  &__button {
+    width: 100%;
+    text-align: center;
+    color: global.$bandsite-white;
+    background-color: global.$bandsite-black;
+    border-radius: 4px;
+    border: none;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    font-family: "Avenir";
+  }
+}
