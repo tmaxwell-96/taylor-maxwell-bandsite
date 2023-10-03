@@ -111,6 +111,7 @@ p {
     margin-bottom: 0.5625rem;
     @include tablet {
       margin-right: 2rem;
+      margin-bottom: 0;
     }
   }
 

@@ -21,6 +21,7 @@
     padding: 1rem;
     @include global.tablet {
       padding: 2rem;
+      align-items: flex-start;
     }
     @include global.desktop {
       padding: 8rem;
@@ -29,6 +30,9 @@
   &__soundcloud-container {
     margin: 1rem 0;
     width: 90%;
+    @include global.tablet {
+      width: 50%;
+    }
   }
   &__album {
     align-self: flex-start;
@@ -43,6 +47,7 @@
     align-self: flex-start;
     @include global.tablet {
       font-size: 3.75rem;
+      line-height: 4.25rem;
     }
     @include global.desktop {
     }
@@ -50,7 +55,9 @@
 }
 
 .shows {
-  padding: 1rem;
+  &__title {
+    margin: 1rem 0 0 1rem;
+  }
 }
 
 .cards {
@@ -61,6 +68,7 @@
 }
 
 .card {
+  margin: 1rem;
   &__top,
   &__middle,
   &__bottom {

@@ -104,6 +104,7 @@ p {
 @media (min-width: 768px) {
   .header__title {
     margin-right: 2rem;
+    margin-bottom: 0;
   }
 }
 .header__link {
@@ -385,6 +386,7 @@ p {
 @media (min-width: 768px) {
   .hero__overlay {
     padding: 2rem;
+    align-items: flex-start;
   }
 }
 @media (min-width: 1280px) {
@@ -395,6 +397,11 @@ p {
 .hero__soundcloud-container {
   margin: 1rem 0;
   width: 90%;
+}
+@media (min-width: 768px) {
+  .hero__soundcloud-container {
+    width: 50%;
+  }
 }
 .hero__album {
   align-self: flex-start;
@@ -411,10 +418,11 @@ p {
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
-.shows {
-  padding: 1rem;
+.shows__title {
+  margin: 1rem 0 0 1rem;
 }
 
 .cards__divider {
@@ -422,6 +430,9 @@ p {
   width: 100vw;
 }
 
+.card {
+  margin: 1rem;
+}
 .card__top, .card__middle, .card__bottom {
   padding: 0.75rem 0;
 }
