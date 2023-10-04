@@ -6,7 +6,7 @@
   background-size: cover;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   @include global.tablet {
   }
@@ -19,6 +19,7 @@
     height: 100%;
     width: 100%;
     padding: 1rem;
+    align-self: center;
     @include global.tablet {
       padding: 2rem;
       align-items: flex-start;
@@ -28,6 +29,8 @@
     }
   }
   &__container {
+    align-self: flex-start;
+    width: 100%;
     @include global.desktop {
       display: flex;
       justify-content: space-between;
@@ -36,7 +39,8 @@
   }
   &__soundcloud-container {
     margin: 1rem 0;
-    width: 90%;
+    width: 100%;
+    align-self: center;
     @include global.tablet {
       width: 50%;
     }

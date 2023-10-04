@@ -370,7 +370,7 @@ p {
   background-size: cover;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 .hero__overlay {
@@ -382,6 +382,7 @@ p {
   height: 100%;
   width: 100%;
   padding: 1rem;
+  align-self: center;
 }
 @media (min-width: 768px) {
   .hero__overlay {
@@ -394,6 +395,10 @@ p {
     padding: 8rem;
   }
 }
+.hero__container {
+  align-self: flex-start;
+  width: 100%;
+}
 @media (min-width: 1280px) {
   .hero__container {
     display: flex;
@@ -403,7 +408,8 @@ p {
 }
 .hero__soundcloud-container {
   margin: 1rem 0;
-  width: 90%;
+  width: 100%;
+  align-self: center;
 }
 @media (min-width: 768px) {
   .hero__soundcloud-container {
