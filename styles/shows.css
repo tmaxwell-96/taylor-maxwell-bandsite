@@ -424,6 +424,17 @@ p {
 .shows__title {
   margin: 1rem 0 0 1rem;
 }
+.shows__heading {
+  display: none;
+}
+@media (min-width: 768px) {
+  .shows__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 2rem 0 2rem;
+  }
+}
 
 .cards__divider {
   border-bottom: 5px solid #e1e1e1;
@@ -433,14 +444,35 @@ p {
 .card {
   margin: 1rem;
 }
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+  }
+}
 .card__top, .card__middle, .card__bottom {
   padding: 0.75rem 0;
+}
+@media (min-width: 768px) {
+  .card__top .card__text--light, .card__middle .card__text--light, .card__bottom .card__text--light {
+    display: none;
+  }
+}
+.card__text {
+  width: 6.5756rem;
 }
 .card__text--light {
   color: #afafaf;
 }
 .card__text--bold {
   font-weight: 700;
+}
+.card__placeholder {
+  width: 10.33rem;
+  height: 2.53rem;
 }
 .card__button {
   width: 100%;
@@ -452,4 +484,9 @@ p {
   padding: 1rem 0;
   font-size: 1.25rem;
   font-family: "Avenir";
+}
+@media (min-width: 768px) {
+  .card__button {
+    padding: 0.5rem 2rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

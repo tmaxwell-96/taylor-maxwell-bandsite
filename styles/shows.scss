@@ -58,6 +58,15 @@
   &__title {
     margin: 1rem 0 0 1rem;
   }
+  &__heading {
+    display: none;
+    @include global.tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3rem 2rem 0 2rem;
+    }
+  }
 }
 
 .cards {
@@ -69,16 +78,44 @@
 
 .card {
   margin: 1rem;
+  @include global.tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+  }
   &__top,
   &__middle,
   &__bottom {
     padding: 0.75rem 0;
+    .card__text--light {
+      @include global.tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    width: 6.5756rem;
+  }
+  &__middle {
+    @include global.tablet {
+    }
+  }
+  &__bottom {
+    @include global.tablet {
+    }
   }
   &__text--light {
     color: global.$bandsite-silver;
   }
   &__text--bold {
     font-weight: 700;
+  }
+  &__placeholder {
+    width: 10.33rem;
+    height: 2.53rem;
   }
   &__button {
     width: 100%;
@@ -90,5 +127,8 @@
     padding: 1rem 0;
     font-size: 1.25rem;
     font-family: "Avenir";
+    @include global.tablet {
+      padding: 0.5rem 2rem;
+    }
   }
 }
