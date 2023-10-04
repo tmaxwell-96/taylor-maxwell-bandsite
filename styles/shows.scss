@@ -27,6 +27,13 @@
       padding: 8rem;
     }
   }
+  &__container {
+    @include global.desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
   &__soundcloud-container {
     margin: 1rem 0;
     width: 90%;
@@ -55,8 +62,17 @@
 }
 
 .shows {
+  @include global.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 8rem;
+  }
   &__title {
     margin: 1rem 0 0 1rem;
+    @include global.desktop {
+      padding: 2rem 2rem 0 8rem;
+    }
   }
   &__heading {
     display: none;
@@ -73,6 +89,9 @@
   &__divider {
     border-bottom: 5px solid global.$bandsite-mercury;
     width: 100vw;
+    @include global.desktop {
+      width: 65vw;
+    }
   }
 }
 
@@ -97,7 +116,7 @@
   }
 
   &__text {
-    width: 6.5756rem;
+    width: 8rem;
   }
   &__middle {
     @include global.tablet {

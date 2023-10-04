@@ -394,6 +394,13 @@ p {
     padding: 8rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .hero__soundcloud-container {
   margin: 1rem 0;
   width: 90%;
@@ -421,8 +428,21 @@ p {
     line-height: 4.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 8rem;
+  }
+}
 .shows__title {
   margin: 1rem 0 0 1rem;
+}
+@media (min-width: 1280px) {
+  .shows__title {
+    padding: 2rem 2rem 0 8rem;
+  }
 }
 .shows__heading {
   display: none;
@@ -439,6 +459,11 @@ p {
 .cards__divider {
   border-bottom: 5px solid #e1e1e1;
   width: 100vw;
+}
+@media (min-width: 1280px) {
+  .cards__divider {
+    width: 65vw;
+  }
 }
 
 .card {
@@ -462,7 +487,7 @@ p {
   }
 }
 .card__text {
-  width: 6.5756rem;
+  width: 8rem;
 }
 .card__text--light {
   color: #afafaf;
