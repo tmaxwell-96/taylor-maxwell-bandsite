@@ -50,10 +50,10 @@
   }
   &__album {
     align-self: flex-start;
-    color: $bandsite-white;
+    color: $bandsite-light;
   }
   &__title {
-    color: $bandsite-white;
+    color: $bandsite-light;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -94,7 +94,7 @@
 
 .cards {
   &__divider {
-    border-bottom: 5px solid $bandsite-mercury;
+    border-bottom: 5px solid $bandsite-secondary-light;
     width: 100vw;
     @include desktop {
       width: 65vw;
@@ -134,7 +134,7 @@
     }
   }
   &__text--light {
-    color: $bandsite-silver;
+    color: $bandsite-secondary-text
   }
   &__text--bold {
     font-weight: 700;
@@ -146,8 +146,8 @@
   &__button {
     width: 100%;
     text-align: center;
-    color: $bandsite-white;
-    background-color: $bandsite-black;
+    color: $bandsite-light;
+    background-color: $bandsite-primary-dark;
     border-radius: 4px;
     border: none;
     padding: 1rem 0;

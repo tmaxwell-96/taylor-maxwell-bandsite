@@ -17,7 +17,7 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 400;
-  color: $bandsite-white;
+  color: $bandsite-light;
   @include tablet {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -60,7 +60,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: $bandsite-black;
+  background-color: $bandsite-primary-dark;
   padding: 1rem 0 0 0;
   @include tablet {
     padding: 0 2rem;
@@ -83,7 +83,7 @@ p {
   }
 
   &__link {
-    color: $bandsite-white;
+    color: $bandsite-light;
     text-decoration: none;
     &:hover {
       color: rgb(187, 140, 187);
@@ -122,7 +122,7 @@ p {
     }
     &__link {
       text-decoration: none;
-      color: $bandsite-white;
+      color: $bandsite-light;
       font-weight: 500;
       &:hover {
         color: rgb(187, 140, 187);
@@ -141,7 +141,7 @@ p {
       align-items: flex-end;
       text-decoration: none;
       text-align: center;
-      color: $bandsite-white;
+      color: $bandsite-light;
       width: 100%;
       margin: 0;
       padding-bottom: 1rem;
@@ -160,8 +160,8 @@ p {
 }
 
 .footer {
-  background-color: $bandsite-black;
-  color: $bandsite-white;
+  background-color: $bandsite-primary-dark;
+  color: $bandsite-light;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -226,7 +226,7 @@ p {
 
   &__link {
     display: inline-block;
-    color: $bandsite-white;
+    color: $bandsite-light;
     text-decoration: none;
     &:hover {
       color: rgb(187, 140, 187);
@@ -234,7 +234,7 @@ p {
   }
   &__site {
     font-weight: 400;
-    color: $bandsite-white;
+    color: $bandsite-light;
     margin-top: 2.5rem;
     &--wide {
       display: none;
@@ -288,7 +288,7 @@ p {
   }
 
   &__email {
-    color: $bandsite-white;
+    color: $bandsite-light;
     text-decoration: none;
     &:hover {
       color: rgb(187, 140, 187);

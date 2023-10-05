@@ -31,7 +31,7 @@
     }
   }
   &__title {
-    color: $bandsite-white;
+    color: $bandsite-light;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -110,7 +110,7 @@
   }
 
   &__text {
-    color: $bandsite-black;
+    color: $bandsite-primary-dark;
     margin-bottom: 1rem;
     @include tablet {
       margin-right: 2rem;
@@ -122,7 +122,7 @@
 }
 
 .photos {
-  background-color: $bandsite-alabaster;
+  background-color: $bandsite-light-background;
   padding: 1rem 1rem;
   @include tablet {
     padding: 2rem;
@@ -173,7 +173,7 @@
   align-items: flex-start;
   margin-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid $bandsite-mercury;
+  border-bottom: 2px solid $bandsite-secondary-light;
   &__left {
     display: flex;
     justify-content: center;
@@ -197,7 +197,7 @@
     background-position: center;
   }
   &__label {
-    color: $bandsite-silver;
+    color: $bandsite-secondary-text;
     margin-bottom: 0.5rem;
   }
   &__name,
@@ -205,10 +205,10 @@
     width: 100%;
     margin-bottom: 1rem;
     font-family: "Avenir", Verdana, sans-serif;
-    border: 1px solid $bandsite-silver;
+    border: 1px solid $bandsite-secondary-text;
     border-radius: 4px;
-    background-color: $bandsite-alabaster;
-    color: $bandsite-darkblack;
+    background-color: $bandsite-light-background;
+    color: $bandsite-darkest;
     padding: 0.5rem;
   }
   &__name {
@@ -223,9 +223,9 @@
     line-height: 2rem;
     font-weight: 550;
     width: 100%;
-    color: $bandsite-white;
+    color: $bandsite-light;
     text-align: center;
-    background-color: $bandsite-black;
+    background-color: $bandsite-primary-dark;
     border: none;
     border-radius: 4px;
     padding: 1rem 0;
