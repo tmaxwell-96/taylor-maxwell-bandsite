@@ -550,4 +550,72 @@ p {
   .photos__images {
     width: 29%;
   }
+}
+
+.comments {
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+.form__left {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  margin: 1.71875rem 1rem 0 0;
+}
+.form__right {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form__profile {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.form__label {
+  color: #afafaf;
+  margin-bottom: 0.5rem;
+}
+.form__name, .form__comment {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-family: "Avenir";
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  background-color: #fafafa;
+  color: #000000;
+  padding: 0.5rem;
+}
+.form__name {
+  height: 2.5rem;
+}
+.form__comment {
+  height: 7.5rem;
+}
+.form__button {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  font-weight: 550;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  background-color: #323232;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 0;
 }/*# sourceMappingURL=bio.css.map */
