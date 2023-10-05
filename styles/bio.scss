@@ -31,7 +31,7 @@
     }
   }
   &__title {
-    color: global.$bandsite-white;
+    color: $bandsite-white;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -124,7 +124,7 @@
 .photos {
   background-color: $bandsite-alabaster;
   padding: 1rem 1rem;
-  @include gtablet {
+  @include tablet {
     padding: 2rem;
   }
   @include desktop {
