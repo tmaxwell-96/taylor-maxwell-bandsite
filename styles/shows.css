@@ -519,5 +519,6 @@ p {
 @media (min-width: 768px) {
   .card__button {
     padding: 0.5rem 2rem;
+    width: auto;
   }
 }/*# sourceMappingURL=shows.css.map */

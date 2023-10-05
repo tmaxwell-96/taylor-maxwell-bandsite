@@ -152,6 +152,7 @@
     font-family: "Avenir";
     @include global.tablet {
       padding: 0.5rem 2rem;
+      width: auto;
     }
   }
 }
