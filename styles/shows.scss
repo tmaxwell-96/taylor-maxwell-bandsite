@@ -152,7 +152,7 @@
     border: none;
     padding: 1rem 0;
     font-size: 1.25rem;
-    font-family: "Avenir";
+    font-family: "Avenir", Verdana, sans-serif;
     @include tablet {
       padding: 0.5rem 2rem;
       width: auto;
