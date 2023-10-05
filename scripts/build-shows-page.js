@@ -1,3 +1,5 @@
+//Have a second array for just the headings, and one for just the data, or hardcode the heading values in the for loop.
+
 const showsArray = [
   {
     date: "Date",
