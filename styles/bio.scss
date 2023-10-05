@@ -164,7 +164,67 @@
 }
 
 .comments {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+  @include tablet {
+    padding: 2rem;
+  }
+  &__wrapper {
+    @include tablet {
+      width: 90%;
+      align-self: center;
+    }
+    @include desktop {
+      max-width: 75rem;
+    }
+  }
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid $bandsite-secondary-light;
+  padding: 1rem 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__left {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+    margin: 1rem 0 0 0;
+  }
+  &__right {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__right-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  &__profile {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: $bandsite-secondary-light;
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__date {
+    color: $bandsite-secondary-text;
+  }
 }
 
 .form {
@@ -176,13 +236,13 @@
   border-bottom: 2px solid $bandsite-secondary-light;
   &__left {
     display: flex;
-    justify-content: center;
-    width: 15%;
+    justify-content: flex-start;
+    width: auto;
     height: 100%;
-    margin: 1.71875rem 1rem 0 0;
+    margin: 1.71875rem 00 0;
   }
   &__right {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -229,5 +289,11 @@
     border: none;
     border-radius: 4px;
     padding: 1rem 0;
+    @include tablet {
+      width: auto;
+      margin: 1rem 0;
+      align-self: flex-end;
+      padding: 1rem 3rem;
+    }
   }
 }
