@@ -1,4 +1,7 @@
-@use "./partials/global";
+@use "./partials/global" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
 
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
@@ -8,7 +11,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  @include global.tablet {
+  @include tablet {
   }
   &__overlay {
     display: flex;
@@ -20,18 +23,18 @@
     width: 100%;
     padding: 1rem;
     align-self: center;
-    @include global.tablet {
+    @include tablet {
       padding: 2rem;
       align-items: flex-start;
     }
-    @include global.desktop {
+    @include desktop {
       padding: 8rem;
     }
   }
   &__container {
     align-self: flex-start;
     width: 100%;
-    @include global.desktop {
+    @include desktop {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -41,32 +44,32 @@
     margin: 1rem 0;
     width: 100%;
     align-self: center;
-    @include global.tablet {
+    @include tablet {
       width: 50%;
     }
   }
   &__album {
     align-self: flex-start;
-    color: global.$bandsite-white;
+    color: $bandsite-white;
   }
   &__title {
-    color: global.$bandsite-white;
+    color: $bandsite-white;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
     width: 65%;
     align-self: flex-start;
-    @include global.tablet {
+    @include tablet {
       font-size: 3.75rem;
       line-height: 4.25rem;
     }
-    @include global.desktop {
+    @include desktop {
     }
   }
 }
 
 .shows {
-  @include global.desktop {
+  @include desktop {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -74,13 +77,13 @@
   }
   &__title {
     margin: 1rem 0 0 1rem;
-    @include global.desktop {
+    @include desktop {
       padding: 2rem 2rem 0 8rem;
     }
   }
   &__heading {
     display: none;
-    @include global.tablet {
+    @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -91,9 +94,9 @@
 
 .cards {
   &__divider {
-    border-bottom: 5px solid global.$bandsite-mercury;
+    border-bottom: 5px solid $bandsite-mercury;
     width: 100vw;
-    @include global.desktop {
+    @include desktop {
       width: 65vw;
     }
   }
@@ -101,7 +104,7 @@
 
 .card {
   margin: 1rem;
-  @include global.tablet {
+  @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -113,7 +116,7 @@
   &__bottom {
     padding: 0.75rem 0;
     .card__text--light {
-      @include global.tablet {
+      @include tablet {
         display: none;
       }
     }
@@ -123,15 +126,15 @@
     width: 8rem;
   }
   &__middle {
-    @include global.tablet {
+    @include tablet {
     }
   }
   &__bottom {
-    @include global.tablet {
+    @include tablet {
     }
   }
   &__text--light {
-    color: global.$bandsite-silver;
+    color: $bandsite-silver;
   }
   &__text--bold {
     font-weight: 700;
@@ -143,14 +146,14 @@
   &__button {
     width: 100%;
     text-align: center;
-    color: global.$bandsite-white;
-    background-color: global.$bandsite-black;
+    color: $bandsite-white;
+    background-color: $bandsite-black;
     border-radius: 4px;
     border: none;
     padding: 1rem 0;
     font-size: 1.25rem;
     font-family: "Avenir";
-    @include global.tablet {
+    @include tablet {
       padding: 0.5rem 2rem;
       width: auto;
     }
