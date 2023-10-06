@@ -76,11 +76,11 @@ commentForm.addEventListener("submit", function (event) {
 
   let newComment = {
     commentName: event.target.commentFormName.value,
-    commentDate: Date.now(),
+    commentDate: new Date().toLocaleDateString(),
     commentText: event.target.commentFormText.value,
   };
 
-  console.log(newComment);
+  //   console.log(newComment);
 
   defaultComments.unshift(newComment);
 
@@ -88,3 +88,5 @@ commentForm.addEventListener("submit", function (event) {
 
   commentForm.reset();
 });
+
+console.log(new Date().toLocaleDateString());
