@@ -76,7 +76,7 @@ commentForm.addEventListener("submit", function (event) {
 
   let newComment = {
     commentName: event.target.commentFormName.value,
-    commentDate: new Date().toLocaleDateString(),
+    commentDate: new Date().toLocaleDateString("en-US"),
     commentText: event.target.commentFormText.value,
   };
 
@@ -89,4 +89,4 @@ commentForm.addEventListener("submit", function (event) {
   commentForm.reset();
 });
 
-console.log(new Date().toLocaleDateString());
+// console.log(new Date().toLocaleDateString());

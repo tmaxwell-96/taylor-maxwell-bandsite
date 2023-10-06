@@ -2,8 +2,6 @@
 @use "./variables" as *;
 @use "./fonts" as *;
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -89,72 +87,72 @@ p {
       color: rgb(187, 140, 187);
     }
   }
+}
 
-  .nav {
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50vw;
+  }
+  @include desktop {
+    height: 8vh;
+    justify-content: flex-start;
+  }
+  &__items {
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
     @include tablet {
-      flex-direction: row;
-      justify-content: flex-start;
+      width: 50%;
       height: 100%;
-      width: 50vw;
+      align-self: flex-end;
     }
-    @include desktop {
-      height: 8vh;
-      justify-content: flex-start;
+  }
+  &__link {
+    text-decoration: none;
+    color: $bandsite-light;
+    font-weight: 500;
+    &:hover {
+      color: rgb(187, 140, 187);
     }
-    &__items {
-      list-style-type: none;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 0;
-      width: 100%;
-      margin-bottom: 0;
-      text-align: center;
-      @include tablet {
-        width: 50%;
-        height: 100%;
-        align-self: flex-end;
-      }
+    @include tablet {
+      font-size: 1.2rem;
     }
-    &__link {
-      text-decoration: none;
-      color: $bandsite-light;
-      font-weight: 500;
-      &:hover {
-        color: rgb(187, 140, 187);
-      }
-      @include tablet {
-        font-size: 1.2rem;
-      }
 
-      &--active {
-        font-weight: 600;
-      }
+    &--active {
+      font-weight: 600;
     }
-    &__item {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      text-decoration: none;
-      text-align: center;
-      color: $bandsite-light;
-      width: 100%;
-      margin: 0;
-      padding-bottom: 1rem;
-      @include tablet {
-        width: auto;
-        height: 100%;
-        align-items: center;
-        margin: 0 1rem;
-        padding-bottom: 0;
-      }
-      &--active {
-        border-bottom: 4px white solid;
-      }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+    text-align: center;
+    color: $bandsite-light;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+    @include tablet {
+      width: auto;
+      height: 100%;
+      align-items: center;
+      margin: 0 1rem;
+      padding-bottom: 0;
+    }
+    &--active {
+      border-bottom: 4px white solid;
     }
   }
 }
