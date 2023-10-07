@@ -50,10 +50,10 @@
   }
   &__album {
     align-self: flex-start;
-    color: $bandsite-light;
+    color: $bandsite-primary-light;
   }
   &__title {
-    color: $bandsite-light;
+    color: $bandsite-primary-light;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
@@ -69,6 +69,9 @@
 }
 
 .shows {
+  @include tablet {
+    padding-bottom: 3rem;
+  }
   @include desktop {
     display: flex;
     justify-content: space-between;
@@ -77,6 +80,9 @@
   }
   &__title {
     margin: 1rem 0 0 1rem;
+    @include tablet {
+      padding: 1rem 2rem;
+    }
     @include desktop {
       padding: 2rem 2rem 0 8rem;
     }
@@ -93,9 +99,15 @@
 }
 
 .cards {
+  @include tablet {
+    margin: 0 1rem;
+  }
   &__divider {
-    border-bottom: 5px solid $bandsite-secondary-light;
+    border-bottom: 2px solid $bandsite-secondary-mid;
     width: 100vw;
+    @include tablet {
+      width: 100%;
+    }
     @include desktop {
       width: 65vw;
     }
@@ -103,13 +115,22 @@
 }
 
 .card {
-  margin: 1rem;
+  padding: 1rem;
+  &:hover {
+    background-color: $bandsite-secondary-light;
+  }
+  &--selected {
+    background-color: $bandsite-secondary-mid;
+  }
+  &--selected:hover {
+    background-color: $bandsite-secondary-mid;
+  }
   @include tablet {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
   }
   &__top,
   &__middle,
@@ -134,7 +155,7 @@
     }
   }
   &__text--light {
-    color: $bandsite-secondary-text
+    color: $bandsite-primary-mid;
   }
   &__text--bold {
     font-weight: 700;
@@ -146,7 +167,7 @@
   &__button {
     width: 100%;
     text-align: center;
-    color: $bandsite-light;
+    color: $bandsite-primary-light;
     background-color: $bandsite-primary-dark;
     border-radius: 4px;
     border: none;

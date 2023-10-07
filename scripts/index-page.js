@@ -74,6 +74,9 @@ appendComments();
 commentForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
+  let nameInput = document.querySelector(".form__name");
+  let textInput = document.querySelector(".form__comment");
+
   let newComment = {
     commentName: event.target.commentFormName.value,
     commentDate: new Date().toLocaleDateString("en-US"),
@@ -81,12 +84,30 @@ commentForm.addEventListener("submit", function (event) {
   };
 
   //   console.log(newComment);
+  if ((newComment.commentName != "") & (newComment.commentText != "")) {
+    defaultComments.unshift(newComment);
 
-  defaultComments.unshift(newComment);
+    appendComments();
 
-  appendComments();
+    commentForm.reset();
 
-  commentForm.reset();
+    nameInput.classList.remove("form__name--error");
+    nameInput.placeholder = "Enter Your Name";
+
+    textInput.classList.remove("form__comment--error");
+    textInput.placeholder = "Add a New Comment";
+  } else if ((newComment.commentName == "") & (newComment.commentText == "")) {
+    nameInput.classList.add("form__name--error");
+    nameInput.placeholder = "Please Add Your Name";
+    textInput.classList.add("form__comment--error");
+    textInput.placeholder = "Please Add a Comment";
+  } else if (newComment.commentName == "") {
+    nameInput.classList.add("form__name--error");
+    nameInput.placeholder = "Please Add Your Name";
+  } else if (newComment.commentText == "") {
+    textInput.classList.add("form__comment--error");
+    textInput.placeholder = "Please Add a Comment";
+  }
 });
 
 // console.log(new Date().toLocaleDateString());

@@ -637,7 +637,7 @@ p {
   justify-content: flex-start;
   width: auto;
   height: 100%;
-  margin: 1.71875rem 0 0;
+  margin: 1.71875rem 1rem 0 0;
 }
 .form__right {
   width: 90%;
@@ -668,11 +668,22 @@ p {
   color: #000000;
   padding: 0.5rem;
 }
+.form__name--error, .form__name--error, .form__comment--error, .form__comment--error {
+  border: 1px solid #d22d2d;
+}
 .form__name {
   height: 2.5rem;
 }
+.form__name:focus {
+  outline: none;
+  border: 1px solid black;
+}
 .form__comment {
   height: 7.5rem;
+}
+.form__comment:focus {
+  outline: none;
+  border: 1px solid black;
 }
 .form__button {
   font-size: 1.5rem;

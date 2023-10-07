@@ -96,3 +96,19 @@ function appendShows(array) {
 }
 
 appendShows(showsArray);
+
+let selectedCards = document.querySelectorAll(".card");
+
+// console.log(selectedCards);
+
+for (let i = 0; i < selectedCards.length; i++) {
+  selectedCards[i].addEventListener("click", function (event) {
+    for (let i = 0; i < selectedCards.length; i++) {
+      if (selectedCards[i] !== event.currentTarget) {
+        selectedCards[i].classList.remove("card--selected");
+      }
+    }
+
+    event.currentTarget.classList.toggle("card--selected");
+  });
+}
