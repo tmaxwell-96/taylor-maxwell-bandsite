@@ -13,7 +13,7 @@
   align-items: center;
   position: relative;
   @include tablet {
-    height: 45vh;
+    min-height: 65vh;
   }
   &__overlay {
     display: flex;
@@ -61,7 +61,7 @@
     justify-content: space-between;
     align-items: flex-start;
     @include tablet {
-      padding: 1rem 3rem;
+      padding: 1.5rem 3rem 1rem 3rem;
     }
   }
   &__container {
@@ -170,13 +170,112 @@
   @include tablet {
     padding: 2rem;
   }
+  @include desktop {
+    padding: 2rem 8rem;
+  }
   &__wrapper {
     @include tablet {
       width: 80%;
       align-self: center;
     }
     @include desktop {
-      max-width: 75rem;
+      margin: 0 auto;
+      max-width: 55%;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $bandsite-secondary-mid;
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    height: 100%;
+    margin: 1.53rem 1rem 0 0;
+  }
+  &__right {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__profile {
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+    background-image: (url(../assets/images/Mohan-muruge.jpg));
+    background-size: cover;
+    background-position: center;
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  &__label {
+    color: $bandsite-primary-mid;
+    margin-bottom: 0.25rem;
+    font-size: 0.8125rem;
+  }
+  &__name,
+  &__comment {
+    font-size: 0.8125rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: "Avenir", Verdana, sans-serif;
+    border: 1px solid $bandsite-secondary-mid;
+    border-radius: 4px;
+    background-color: $bandsite-secondary-light;
+    color: $bandsite-secondary-dark;
+    padding: 0.75rem;
+    @include tablet {
+      padding: 1rem;
+      font-size: 0.875rem;
+    }
+    &--error,
+    &--error {
+      border: 1px solid $bandsite-error-color;
+    }
+  }
+  &__name {
+    height: 2.5rem;
+    &:focus {
+      outline: none;
+      border: 1px solid black;
+    }
+    @include tablet {
+      height: 3rem;
+    }
+  }
+  &__comment {
+    height: 7.5rem;
+    &:focus {
+      outline: none;
+      border: 1px solid black;
+    }
+  }
+  &__button {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 550;
+    width: 100%;
+    color: $bandsite-primary-light;
+    text-align: center;
+    background-color: $bandsite-primary-dark;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    @include tablet {
+      width: auto;
+      margin: 1rem 0;
+      align-self: flex-end;
+      padding: 0.5rem 3rem;
     }
   }
 }
@@ -185,7 +284,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  border-bottom: 2px solid $bandsite-secondary-mid;
+  border-bottom: 1px solid $bandsite-secondary-mid;
   padding: 1rem 0;
   &__wrapper {
     display: flex;
@@ -194,13 +293,13 @@
   }
   &__left {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: auto;
     height: 100%;
-    margin: 1rem 0 0 0;
+    margin: 1.53rem 1rem 0 0;
   }
   &__right {
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -214,98 +313,28 @@
     margin: 1rem 0;
   }
   &__profile {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.25rem;
+    width: 2.25rem;
     border-radius: 50%;
     background-color: $bandsite-secondary-mid;
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__name,
+  &__date,
+  &__text {
+    font-size: 0.8125rem;
+    @include tablet {
+      font-size: 0.875rem;
+    }
   }
   &__name {
     font-weight: 700;
   }
   &__date {
     color: $bandsite-primary-mid;
-  }
-}
-
-.form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid $bandsite-secondary-mid;
-  &__left {
-    display: flex;
-    justify-content: flex-start;
-    width: auto;
-    height: 100%;
-    margin: 1.71875rem 1rem 0 0;
-  }
-  &__right {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  &__profile {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    background-image: (url(../assets/images/Mohan-muruge.jpg));
-    background-size: cover;
-    background-position: center;
-  }
-  &__label {
-    color: $bandsite-primary-mid;
-    margin-bottom: 0.5rem;
-  }
-  &__name,
-  &__comment {
-    width: 100%;
-    margin-bottom: 1rem;
-    font-family: "Avenir", Verdana, sans-serif;
-    border: 1px solid $bandsite-primary-mid;
-    border-radius: 4px;
-    background-color: $bandsite-secondary-light;
-    color: $bandsite-secondary-dark;
-    padding: 0.5rem;
-    &--error,
-    &--error {
-      border: 1px solid $bandsite-error-color;
-    }
-  }
-  &__name {
-    height: 2.5rem;
-    &:focus {
-      outline: none;
-      border: 1px solid black;
-    }
-  }
-  &__comment {
-    height: 7.5rem;
-    &:focus {
-      outline: none;
-      border: 1px solid black;
-    }
-  }
-  &__button {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    line-height: 2rem;
-    font-weight: 550;
-    width: 100%;
-    color: $bandsite-primary-light;
-    text-align: center;
-    background-color: $bandsite-primary-dark;
-    border: none;
-    border-radius: 4px;
-    padding: 1rem 0;
-    @include tablet {
-      width: auto;
-      margin: 1rem 0;
-      align-self: flex-end;
-      padding: 1rem 3rem;
-    }
   }
 }

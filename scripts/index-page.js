@@ -46,6 +46,9 @@ function appendComments() {
 
     let commentCardDate = document.createElement("p");
     commentCardDate.classList.add("comment__date");
+
+    const commentDate = new Date(defaultComments[i].commentDate);
+
     commentCardDate.innerText = defaultComments[i].commentDate;
 
     let commentCardText = document.createElement("p");
