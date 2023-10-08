@@ -62,12 +62,12 @@ p {
   padding: 1rem 0 0 0;
   @include tablet {
     padding: 0 2rem;
-    min-height: 10vh;
     justify-content: flex-end;
+    height: 5rem;
   }
   @include desktop {
     padding-left: 8rem;
-    min-height: 8vh;
+    height: 5rem;
   }
 
   &__title {
@@ -97,12 +97,12 @@ p {
   justify-content: center;
   @include tablet {
     flex-direction: row;
-    justify-content: flex-start;
-    min-height: 10vh;
     width: 50vw;
+    height: 5rem;
+    justify-content: flex-start;
   }
   @include desktop {
-    height: 8vh;
+    height: 5rem;
     justify-content: flex-start;
   }
   &__items {
@@ -116,11 +116,11 @@ p {
     text-align: center;
     @include tablet {
       width: 50%;
-      height: 10vh;
+      height: 5rem;
       align-self: flex-end;
     }
     @include desktop {
-      min-height: 8vh;
+      height: 5rem;
     }
   }
   &__link {
@@ -156,7 +156,7 @@ p {
       padding-bottom: 0;
     }
     &--active {
-      border-bottom: 4px white solid;
+      border-bottom: 2px white solid;
     }
   }
 }

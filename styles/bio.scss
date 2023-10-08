@@ -7,13 +7,13 @@
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 25vh;
+  height: 15rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
   @include tablet {
-    min-height: 65vh;
+    height: 40rem;
   }
   &__overlay {
     display: flex;

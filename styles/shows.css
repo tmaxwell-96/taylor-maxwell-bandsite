@@ -89,14 +89,14 @@ p {
 @media (min-width: 768px) {
   .header {
     padding: 0 2rem;
-    min-height: 10vh;
     justify-content: flex-end;
+    height: 5rem;
   }
 }
 @media (min-width: 1280px) {
   .header {
     padding-left: 8rem;
-    min-height: 8vh;
+    height: 5rem;
   }
 }
 .header__title {
@@ -128,14 +128,14 @@ p {
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    justify-content: flex-start;
-    min-height: 10vh;
     width: 50vw;
+    height: 5rem;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1280px) {
   .nav {
-    height: 8vh;
+    height: 5rem;
     justify-content: flex-start;
   }
 }
@@ -152,13 +152,13 @@ p {
 @media (min-width: 768px) {
   .nav__items {
     width: 50%;
-    height: 10vh;
+    height: 5rem;
     align-self: flex-end;
   }
 }
 @media (min-width: 1280px) {
   .nav__items {
-    min-height: 8vh;
+    height: 5rem;
   }
 }
 .nav__link {
@@ -198,7 +198,7 @@ p {
   }
 }
 .nav__item--active {
-  border-bottom: 4px white solid;
+  border-bottom: 2px white solid;
 }
 
 .footer {
@@ -383,16 +383,25 @@ p {
   align-items: flex-start;
   position: relative;
 }
+@media (min-width: 768px) {
+  .hero {
+    min-height: 25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    min-height: 35rem;
+  }
+}
 .hero__overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   background-color: rgba(50, 50, 50, 0.5);
-  height: 100%;
+  min-height: 100%;
   width: 100%;
-  padding: 1rem;
-  align-self: center;
+  padding: 2rem 1rem;
 }
 @media (min-width: 768px) {
   .hero__overlay {
@@ -403,6 +412,7 @@ p {
 @media (min-width: 1280px) {
   .hero__overlay {
     padding: 8rem;
+    height: 35rem;
   }
 }
 .hero__container {
@@ -413,7 +423,7 @@ p {
   .hero__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 .hero__soundcloud-container {
@@ -423,30 +433,44 @@ p {
 }
 @media (min-width: 768px) {
   .hero__soundcloud-container {
-    width: 50%;
+    width: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__soundcloud-container {
+    margin: 0;
   }
 }
 .hero__album {
   align-self: flex-start;
   color: #ffffff;
+  margin-bottom: 1rem;
 }
 .hero__title {
   color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  width: 65%;
+  width: 75%;
   align-self: flex-start;
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
+    margin-bottom: 3rem;
   }
 }
+@media (min-width: 1280px) {
+  .hero__title {
+    margin-right: 4rem;
+  }
+}
+
 @media (min-width: 768px) {
   .shows {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -455,10 +479,11 @@ p {
     justify-content: space-between;
     align-items: flex-start;
     padding-right: 8rem;
+    padding-top: 2rem;
   }
 }
 .shows__title {
-  margin: 1rem 0 0 1rem;
+  margin: 2rem 0 0 1rem;
 }
 @media (min-width: 768px) {
   .shows__title {
@@ -467,7 +492,8 @@ p {
 }
 @media (min-width: 1280px) {
   .shows__title {
-    padding: 2rem 2rem 0 8rem;
+    padding: 0 2rem 0 7rem;
+    margin: 1.125rem 0 0 1rem;
   }
 }
 .shows__heading {
@@ -478,7 +504,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem 2rem 0 2rem;
+    margin: 1.5rem 2rem 0 2rem;
   }
 }
 
@@ -520,7 +546,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 0.75rem 2rem;
   }
 }
 .card__top, .card__middle, .card__bottom {

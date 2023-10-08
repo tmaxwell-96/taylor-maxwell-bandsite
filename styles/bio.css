@@ -89,14 +89,14 @@ p {
 @media (min-width: 768px) {
   .header {
     padding: 0 2rem;
-    min-height: 10vh;
     justify-content: flex-end;
+    height: 5rem;
   }
 }
 @media (min-width: 1280px) {
   .header {
     padding-left: 8rem;
-    min-height: 8vh;
+    height: 5rem;
   }
 }
 .header__title {
@@ -128,14 +128,14 @@ p {
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    justify-content: flex-start;
-    min-height: 10vh;
     width: 50vw;
+    height: 5rem;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1280px) {
   .nav {
-    height: 8vh;
+    height: 5rem;
     justify-content: flex-start;
   }
 }
@@ -152,13 +152,13 @@ p {
 @media (min-width: 768px) {
   .nav__items {
     width: 50%;
-    height: 10vh;
+    height: 5rem;
     align-self: flex-end;
   }
 }
 @media (min-width: 1280px) {
   .nav__items {
-    min-height: 8vh;
+    height: 5rem;
   }
 }
 .nav__link {
@@ -198,7 +198,7 @@ p {
   }
 }
 .nav__item--active {
-  border-bottom: 4px white solid;
+  border-bottom: 2px white solid;
 }
 
 .footer {
@@ -378,7 +378,7 @@ p {
   background-image: url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 25vh;
+  height: 15rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -386,7 +386,7 @@ p {
 }
 @media (min-width: 768px) {
   .hero {
-    min-height: 65vh;
+    height: 40rem;
   }
 }
 .hero__overlay {
