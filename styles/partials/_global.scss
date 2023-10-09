@@ -105,6 +105,7 @@ p {
     height: 5rem;
     justify-content: flex-start;
   }
+
   &__items {
     list-style-type: none;
     display: flex;
@@ -123,6 +124,7 @@ p {
       height: 5rem;
     }
   }
+
   &__link {
     text-decoration: none;
     color: $bandsite-primary-light;
@@ -138,6 +140,7 @@ p {
       font-weight: 600;
     }
   }
+
   &__item {
     display: flex;
     justify-content: center;
@@ -176,6 +179,7 @@ p {
     padding: 2rem 8rem;
     position: relative;
   }
+
   &__top {
     display: flex;
     flex-direction: column;
@@ -187,6 +191,7 @@ p {
       justify-content: flex-start;
     }
   }
+
   &__title {
     font-weight: 550;
     margin: 0 0 1rem 0;
@@ -234,6 +239,7 @@ p {
       color: rgb(187, 140, 187);
     }
   }
+
   &__site {
     font-weight: 400;
     color: $bandsite-primary-light;
@@ -273,6 +279,7 @@ p {
       max-width: 49.25rem;
     }
   }
+
   &__card {
     margin: 0.5rem 0.75rem 0.75rem 0;
     display: flex;
@@ -307,6 +314,7 @@ p {
       margin-top: 2rem;
     }
   }
+
   &__copyright {
     margin: 1rem 0 0 0;
     @include tablet {

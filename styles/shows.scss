@@ -17,6 +17,7 @@
   @include desktop {
     min-height: 35rem;
   }
+
   &__overlay {
     display: flex;
     flex-direction: column;
@@ -35,6 +36,7 @@
       height: 35rem;
     }
   }
+
   &__container {
     align-self: flex-start;
     width: 100%;
@@ -44,6 +46,7 @@
       align-items: flex-start;
     }
   }
+
   &__soundcloud-container {
     margin: 1rem 0;
     width: 100%;
@@ -55,11 +58,13 @@
       margin: 0;
     }
   }
+
   &__album {
     align-self: flex-start;
     color: $bandsite-primary-light;
     margin-bottom: 1rem;
   }
+
   &__title {
     color: $bandsite-primary-light;
     font-size: 1.5rem;
@@ -90,6 +95,7 @@
     padding-right: 8rem;
     padding-top: 2rem;
   }
+
   &__title {
     margin: 2rem 0 0 1rem;
     @include tablet {
@@ -98,6 +104,23 @@
     @include desktop {
       padding: 0 2rem 0 7rem;
       margin: 1.125rem 0 0 1rem;
+    }
+  }
+}
+
+.cards {
+  @include tablet {
+    margin: 0 1rem;
+  }
+
+  &__divider {
+    border-bottom: 2px solid $bandsite-secondary-mid;
+    width: 100vw;
+    @include tablet {
+      width: 100%;
+    }
+    @include desktop {
+      width: 65vw;
     }
   }
   &__heading {
@@ -111,30 +134,16 @@
   }
 }
 
-.cards {
-  @include tablet {
-    margin: 0 1rem;
-  }
-  &__divider {
-    border-bottom: 2px solid $bandsite-secondary-mid;
-    width: 100vw;
-    @include tablet {
-      width: 100%;
-    }
-    @include desktop {
-      width: 65vw;
-    }
-  }
-}
-
 .card {
   padding: 1rem;
   &:hover {
     background-color: $bandsite-secondary-light;
   }
+
   &--selected {
     background-color: $bandsite-secondary-mid;
   }
+
   &--selected:hover {
     background-color: $bandsite-secondary-mid;
   }
@@ -145,6 +154,7 @@
     align-items: center;
     padding: 0.75rem 2rem;
   }
+
   &__top,
   &__middle,
   &__bottom {
@@ -159,24 +169,20 @@
   &__text {
     width: 8rem;
   }
-  &__middle {
-    @include tablet {
-    }
-  }
-  &__bottom {
-    @include tablet {
-    }
-  }
+
   &__text--light {
     color: $bandsite-primary-mid;
   }
+
   &__text--bold {
     font-weight: 700;
   }
+
   &__placeholder {
     width: 10.33rem;
     height: 2.53rem;
   }
+
   &__button {
     width: 100%;
     text-align: center;

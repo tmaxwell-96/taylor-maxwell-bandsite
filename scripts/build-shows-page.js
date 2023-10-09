@@ -1,5 +1,4 @@
-//Have a second array for just the headings, and one for just the data, or hardcode the heading values in the for loop.
-
+// Default shows array.
 const showsArray = [
   {
     date: "Mon Sept 06 2021",
@@ -35,6 +34,7 @@ const showsArray = [
 
 const cards = document.querySelector(".cards");
 
+//Add shows array to DOM.
 function appendShows(array) {
   for (let i = 0; i < array.length; i++) {
     const card = document.createElement("div");
@@ -97,15 +97,14 @@ function appendShows(array) {
 
 appendShows(showsArray);
 
+//Add active state to card on click.
 let selectedCards = document.querySelectorAll(".card");
-
-// console.log(selectedCards);
 
 for (let i = 0; i < selectedCards.length; i++) {
   selectedCards[i].addEventListener("click", function (event) {
     for (let i = 0; i < selectedCards.length; i++) {
       if (selectedCards[i] !== event.currentTarget) {
-        selectedCards[i].classList.remove("card--selected");
+        selectedCards[i].classList.remove("card--selected"); //Remove active state from all other cards.
       }
     }
 

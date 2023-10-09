@@ -15,6 +15,7 @@
   @include tablet {
     height: 40rem;
   }
+
   &__overlay {
     display: flex;
     align-items: center;
@@ -30,6 +31,7 @@
       padding: 8rem;
     }
   }
+
   &__title {
     color: $bandsite-primary-light;
     font-size: 1.5rem;
@@ -55,6 +57,7 @@
   @include desktop {
     padding: 2rem 8rem;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -64,6 +67,7 @@
       padding: 1.5rem 3rem 1rem 3rem;
     }
   }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -73,11 +77,13 @@
       flex-direction: row;
     }
   }
+
   &__title {
     margin: 0.5rem 0 0rem 0;
     align-self: flex-start;
     font-weight: 600;
   }
+
   &__image {
     width: 100%;
     margin: 1rem 0;
@@ -86,6 +92,7 @@
       margin: 0 0 2rem 0;
     }
   }
+
   &__quote {
     margin-bottom: 1rem;
     align-self: flex-start;
@@ -103,6 +110,7 @@
     font-size: 1rem;
     margin-bottom: 2rem;
   }
+
   &__band {
     align-self: flex-start;
     font-weight: 550;
@@ -130,6 +138,7 @@
   @include desktop {
     padding: 2rem 8rem;
   }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -149,6 +158,7 @@
       margin-bottom: 1rem;
     }
   }
+
   &__images {
     display: inline-block;
     width: 100%;
@@ -192,13 +202,15 @@
   margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid $bandsite-secondary-mid;
+
   &__left {
     display: flex;
     justify-content: flex-start;
     width: auto;
     height: 100%;
-    margin: 1.53rem 1rem 0 0;
+    margin: 1.3rem 1rem 0 0;
   }
+
   &__right {
     width: 90%;
     display: flex;
@@ -206,6 +218,7 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+
   &__profile {
     height: 2.25rem;
     width: 2.25rem;
@@ -218,11 +231,13 @@
       width: 3rem;
     }
   }
+
   &__label {
     color: $bandsite-primary-mid;
     margin-bottom: 0.25rem;
     font-size: 0.8125rem;
   }
+
   &__name,
   &__comment {
     font-size: 0.8125rem;
@@ -243,6 +258,7 @@
       border: 1px solid $bandsite-error-color;
     }
   }
+
   &__name {
     height: 2.5rem;
     &:focus {
@@ -253,6 +269,7 @@
       height: 3rem;
     }
   }
+
   &__comment {
     height: 7.5rem;
     &:focus {
@@ -260,6 +277,7 @@
       border: 1px solid black;
     }
   }
+
   &__button {
     font-size: 1.25rem;
     line-height: 2rem;
@@ -291,6 +309,7 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+
   &__left {
     display: flex;
     justify-content: flex-start;
@@ -298,6 +317,7 @@
     height: 100%;
     margin: 1.53rem 1rem 0 0;
   }
+
   &__right {
     width: 90%;
     display: flex;
@@ -305,6 +325,7 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+
   &__right-top {
     display: flex;
     justify-content: space-between;
@@ -312,6 +333,7 @@
     width: 100%;
     margin: 1rem 0;
   }
+
   &__profile {
     height: 2.25rem;
     width: 2.25rem;
@@ -331,9 +353,11 @@
       font-size: 0.875rem;
     }
   }
+
   &__name {
     font-weight: 700;
   }
+
   &__date {
     color: $bandsite-primary-mid;
   }

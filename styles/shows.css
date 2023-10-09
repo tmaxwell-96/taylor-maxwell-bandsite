@@ -496,17 +496,6 @@ p {
     margin: 1.125rem 0 0 1rem;
   }
 }
-.shows__heading {
-  display: none;
-}
-@media (min-width: 768px) {
-  .shows__heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1.5rem 2rem 0 2rem;
-  }
-}
 
 @media (min-width: 768px) {
   .cards {
@@ -525,6 +514,17 @@ p {
 @media (min-width: 1280px) {
   .cards__divider {
     width: 65vw;
+  }
+}
+.cards__heading {
+  display: none;
+}
+@media (min-width: 768px) {
+  .cards__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 2rem 0 2rem;
   }
 }
 
