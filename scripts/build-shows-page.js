@@ -34,7 +34,7 @@
 
 const cards = document.querySelector(".cards");
 
-const apiKey = "5f501c9f-d16c-4493-8203-089cc169679b";
+const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
 class BandSiteAPI {

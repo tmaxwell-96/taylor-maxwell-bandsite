@@ -22,7 +22,7 @@
 
 let commentsSection = document.querySelector(".comments__container");
 let commentForm = document.querySelector(".form");
-const apiKey = "5f501c9f-d16c-4493-8203-089cc169679b";
+const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
 console.log("Connected");
@@ -171,15 +171,42 @@ commentForm.addEventListener("submit", async function (event) {
     commentText: event.target.commentFormText.value,
   };
 
-  console.log(newComment);
-  console.log(event.target.commentFormName.value);
-  console.log(event.target.commentFormText.value);
+  // console.log(newComment);
+  // console.log(event.target.commentFormName.value);
+  // console.log(event.target.commentFormText.value);
 
-  const response = await apiConnection.postComment({
-    name: event.target.commentFormName.value,
-    comment: event.target.commentFormText.value,
-  });
-  getComments();
+  // const response = await apiConnection.postComment({
+  //   name: event.target.commentFormName.value,
+  //   comment: event.target.commentFormText.value,
+  // });
+
+  if ((newComment.commentName != "") & (newComment.commentText != "")) {
+    const response = await apiConnection.postComment({
+      name: newComment.commentName,
+      comment: newComment.commentText,
+    });
+
+    getComments();
+    commentForm.reset();
+    // console.log(newComment);
+
+    nameInput.classList.remove("form__name--error");
+    nameInput.placeholder = "Enter Your Name";
+
+    textInput.classList.remove("form__comment--error");
+    textInput.placeholder = "Add a New Comment";
+  } else if ((newComment.commentName == "") & (newComment.commentText == "")) {
+    nameInput.classList.add("form__name--error");
+    nameInput.placeholder = "Please Add Your Name";
+    textInput.classList.add("form__comment--error");
+    textInput.placeholder = "Please Add a Comment";
+  } else if (newComment.commentName == "") {
+    nameInput.classList.add("form__name--error");
+    nameInput.placeholder = "Please Add Your Name";
+  } else if (newComment.commentText == "") {
+    textInput.classList.add("form__comment--error");
+    textInput.placeholder = "Please Add a Comment";
+  }
 });
 
 //Display comments function, looping through array, including newly posted comment.
