@@ -123,7 +123,7 @@ function appendComments() {
 
 // appendComments();
 
-//Add event listener for form submission.
+// Add event listener for form submission.
 commentForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -139,7 +139,7 @@ commentForm.addEventListener("submit", function (event) {
 
   //Form validation to ensure form is properly filled out.
   if ((newComment.commentName != "") & (newComment.commentText != "")) {
-    defaultComments.unshift(newComment);
+    // defaultComments.unshift(newComment);
 
     appendComments();
 
