@@ -11,7 +11,6 @@ class BandSiteAPI {
       `${this.baseURL}comments?api_key=${apiKey}`,
       newComment
     );
-    console.log(response);
   }
 
   async getComments() {
