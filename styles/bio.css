@@ -724,6 +724,27 @@ p {
   width: 100%;
   margin: 1rem 0;
 }
+.comment__right-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+.comment__like, .comment__delete {
+  margin: 0 1rem 0 0;
+  font-family: "Avenir", Verdana, sans-serif;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  background-color: #323232;
+  border: 0;
+  border-radius: 4px;
+}
+.comment__like-count {
+  margin-left: auto;
+  font-weight: 700;
+  color: rgb(187, 140, 187);
+}
 .comment__profile {
   height: 2.25rem;
   width: 2.25rem;

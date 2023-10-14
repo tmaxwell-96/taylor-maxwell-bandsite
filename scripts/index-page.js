@@ -5,13 +5,15 @@ let commentForm = document.querySelector(".form");
 const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
-console.log("Connected");
+// console.log("Connected");
 
 let apiConnection = new BandSiteAPI(apiKey);
 
 async function getComments() {
   const filledComments = await apiConnection.getComments();
   commentsSection.textContent = "";
+
+  console.log(filledComments);
 
   for (let i = 0; i < filledComments.length; i++) {
     let commentCard = document.createElement("div");
@@ -91,6 +93,21 @@ async function getComments() {
     commentCardText.classList.add("comment__text");
     commentCardText.innerText = filledComments[i].comment;
 
+    let commentRightBottom = document.createElement("div");
+    commentRightBottom.classList.add("comment__right-bottom");
+
+    let commentLikeButton = document.createElement("button");
+    commentLikeButton.classList.add("comment__like");
+    commentLikeButton.innerText = "Like";
+
+    let commentDeleteButton = document.createElement("button");
+    commentDeleteButton.classList.add("comment__delete");
+    commentDeleteButton.innerText = "Delete";
+
+    let commentLikeCount = document.createElement("p");
+    commentLikeCount.classList.add("comment__like-count");
+    commentLikeCount.innerText = filledComments[i].likes;
+
     commentCard.appendChild(commentCardLeft);
     commentCard.appendChild(commentCardRight);
 
@@ -98,6 +115,11 @@ async function getComments() {
 
     commentCardRight.appendChild(commentCardRightTop);
     commentCardRight.appendChild(commentCardText);
+    commentCardRight.appendChild(commentRightBottom);
+
+    commentRightBottom.appendChild(commentLikeButton);
+    commentRightBottom.appendChild(commentDeleteButton);
+    commentRightBottom.appendChild(commentLikeCount);
 
     commentCardRightTop.appendChild(commentCardName);
     commentCardRightTop.appendChild(commentCardDate);
@@ -109,6 +131,8 @@ async function getComments() {
 getComments();
 
 //Add event listener for form submission.
+//-------------------------------------------
+
 commentForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
@@ -149,3 +173,5 @@ commentForm.addEventListener("submit", async function (event) {
     textInput.placeholder = "Please Add a Comment";
   }
 });
+
+console.log("connected");
