@@ -27,6 +27,12 @@ class BandSiteAPI {
     );
     return showInfo.data;
   }
+
+  async commentLike(commentId) {
+    let response = await axios.put(
+      `${this.baseURL}comments/${commentId}/like?api_key=${apiKey}`
+    );
+  }
 }
 
 export default BandSiteAPI;

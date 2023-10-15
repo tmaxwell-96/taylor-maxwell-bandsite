@@ -1,19 +1,25 @@
+//Import
+//-------------------------------------------
+
 import BandSiteAPI from "./band-site-api.js";
+
+//Global Variables
+//-------------------------------------------
 
 let commentsSection = document.querySelector(".comments__container");
 let commentForm = document.querySelector(".form");
+let likeButton = document.querySelector(".comment__like");
+let deleteButton = document.querySelector(".comment__like");
 const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
-// console.log("Connected");
-
 let apiConnection = new BandSiteAPI(apiKey);
 
+//Functions
+//-------------------------------------------
 async function getComments() {
   const filledComments = await apiConnection.getComments();
   commentsSection.textContent = "";
-
-  console.log(filledComments);
 
   for (let i = 0; i < filledComments.length; i++) {
     let commentCard = document.createElement("div");
@@ -106,7 +112,7 @@ async function getComments() {
 
     let commentLikeCount = document.createElement("p");
     commentLikeCount.classList.add("comment__like-count");
-    commentLikeCount.innerText = filledComments[i].likes;
+    commentLikeCount.innerText = `Likes: ${filledComments[i].likes}`;
 
     commentCard.appendChild(commentCardLeft);
     commentCard.appendChild(commentCardRight);
@@ -151,8 +157,9 @@ commentForm.addEventListener("submit", async function (event) {
       name: newComment.commentName,
       comment: newComment.commentText,
     });
-
-    getComments();
+    getComments().then(() => {
+      likeComment();
+    });
     commentForm.reset();
 
     nameInput.classList.remove("form__name--error");
@@ -174,4 +181,30 @@ commentForm.addEventListener("submit", async function (event) {
   }
 });
 
-console.log("connected");
+//Add Like Button Functionality.
+//-------------------------------------------
+
+async function likeComment() {
+  const commentLikeButtons = document.querySelectorAll(".comment__like");
+  const response = await apiConnection.getComments();
+  for (let i = 0; i < commentLikeButtons.length; i++) {
+    commentLikeButtons[i].addEventListener("click", async function (event) {
+      const commentLike = await apiConnection.commentLike(response[i].id);
+      getComments().then(() => {
+        likeComment();
+      });
+    });
+  }
+}
+
+getComments().then(() => {
+  likeComment();
+});
+
+//Add Delete Button Functionality.
+//-------------------------------------------
+
+async function deleteComment() {
+  const commentDeleteButtons = document.querySelectorAll(".comment__delete");
+  const response = await apiConnection.getComments();
+}
