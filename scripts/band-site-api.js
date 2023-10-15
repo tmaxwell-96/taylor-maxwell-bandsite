@@ -1,5 +1,11 @@
+//Global Variables
+//-------------------------------------------
+
 const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
+
+//Create a Class
+//-------------------------------------------
 
 class BandSiteAPI {
   constructor(apiKey) {
@@ -31,6 +37,12 @@ class BandSiteAPI {
   async commentLike(commentId) {
     let response = await axios.put(
       `${this.baseURL}comments/${commentId}/like?api_key=${apiKey}`
+    );
+  }
+
+  async commentDelete(commentId) {
+    let response = await axios.delete(
+      `${this.baseURL}comments/${commentId}?api_key=${apiKey}`
     );
   }
 }

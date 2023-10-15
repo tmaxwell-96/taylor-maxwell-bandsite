@@ -393,6 +393,10 @@ p {
     min-height: 35rem;
   }
 }
+.hero__iframe {
+  width: 100%;
+  border: none;
+}
 .hero__overlay {
   display: flex;
   flex-direction: column;

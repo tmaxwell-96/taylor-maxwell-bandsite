@@ -8,8 +8,6 @@ import BandSiteAPI from "./band-site-api.js";
 
 let commentsSection = document.querySelector(".comments__container");
 let commentForm = document.querySelector(".form");
-let likeButton = document.querySelector(".comment__like");
-let deleteButton = document.querySelector(".comment__like");
 const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
@@ -158,7 +156,9 @@ commentForm.addEventListener("submit", async function (event) {
       comment: newComment.commentText,
     });
     getComments().then(() => {
-      likeComment();
+      likeComment().then(() => {
+        deleteComment();
+      });
     });
     commentForm.reset();
 
@@ -191,15 +191,13 @@ async function likeComment() {
     commentLikeButtons[i].addEventListener("click", async function (event) {
       const commentLike = await apiConnection.commentLike(response[i].id);
       getComments().then(() => {
-        likeComment();
+        likeComment().then(() => {
+          deleteComment();
+        });
       });
     });
   }
 }
-
-getComments().then(() => {
-  likeComment();
-});
 
 //Add Delete Button Functionality.
 //-------------------------------------------
@@ -207,4 +205,20 @@ getComments().then(() => {
 async function deleteComment() {
   const commentDeleteButtons = document.querySelectorAll(".comment__delete");
   const response = await apiConnection.getComments();
+  for (let i = 0; i < commentDeleteButtons.length; i++) {
+    commentDeleteButtons[i].addEventListener("click", async function (event) {
+      const commentDelete = await apiConnection.commentDelete(response[i].id);
+      getComments().then(() => {
+        likeComment().then(() => {
+          deleteComment();
+        });
+      });
+    });
+  }
 }
+
+getComments().then(() => {
+  likeComment().then(() => {
+    deleteComment();
+  });
+});

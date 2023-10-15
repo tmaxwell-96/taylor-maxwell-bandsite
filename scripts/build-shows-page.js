@@ -1,13 +1,20 @@
+//Import
+//-------------------------------------------
+
 import BandSiteAPI from "./band-site-api.js";
+
+//Global Variables
+//-------------------------------------------
 
 const cards = document.querySelector(".cards");
 
 const apiKey = "f44a8d71-9c00-4cd3-b3d0-67f611a6155c";
 const URL = "https://project-1-api.herokuapp.com/";
 
-console.log("This is connected");
-
 let apiConnection = new BandSiteAPI(apiKey);
+
+//Functions
+//-------------------------------------------
 
 async function getShows() {
   const shows = await apiConnection.getShows();
