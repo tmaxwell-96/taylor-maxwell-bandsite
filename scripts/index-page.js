@@ -13,122 +13,131 @@ const URL = "https://project-1-api.herokuapp.com/";
 
 let apiConnection = new BandSiteAPI(apiKey);
 
+function displayComments() {}
+
 //Functions
 //-------------------------------------------
 async function getComments() {
-  const filledComments = await apiConnection.getComments();
-  commentsSection.textContent = "";
+  try {
+    const filledComments = await apiConnection.getComments();
 
-  for (let i = 0; i < filledComments.length; i++) {
-    let commentCard = document.createElement("div");
-    commentCard.classList.add("comment");
+    commentsSection.textContent = "";
 
-    let commentCardLeft = document.createElement("div");
-    commentCardLeft.classList.add("comment__left");
-    let commentProfile = document.createElement("div");
-    commentProfile.classList.add("comment__profile");
+    for (let i = 0; i < filledComments.length; i++) {
+      let commentCard = document.createElement("div");
+      commentCard.classList.add("comment");
 
-    let commentCardRight = document.createElement("div");
-    commentCardRight.classList.add("comment__right");
-    let commentCardRightTop = document.createElement("div");
-    commentCardRightTop.classList.add("comment__right-top");
+      let commentCardLeft = document.createElement("div");
+      commentCardLeft.classList.add("comment__left");
+      let commentProfile = document.createElement("div");
+      commentProfile.classList.add("comment__profile");
 
-    let commentCardName = document.createElement("p");
-    commentCardName.classList.add("comment__name");
-    commentCardName.innerText = filledComments[i].name;
+      let commentCardRight = document.createElement("div");
+      commentCardRight.classList.add("comment__right");
+      let commentCardRightTop = document.createElement("div");
+      commentCardRightTop.classList.add("comment__right-top");
 
-    let commentCardDate = document.createElement("p");
-    commentCardDate.classList.add("comment__date");
+      let commentCardName = document.createElement("p");
+      commentCardName.classList.add("comment__name");
+      commentCardName.innerText = filledComments[i].name;
 
-    /*
-     * Start of dynamic date calculation
-     */
+      let commentCardDate = document.createElement("p");
+      commentCardDate.classList.add("comment__date");
 
-    const currentDate = new Date();
-    const commentDate = new Date(filledComments[i].timestamp);
+      /*
+       * Start of dynamic date calculation
+       */
 
-    const timeDifference = currentDate - commentDate;
+      const currentDate = new Date();
+      const commentDate = new Date(filledComments[i].timestamp);
 
-    const minutesAgo = Math.floor(timeDifference / (1000 * 60));
-    const hoursAgo = Math.floor(minutesAgo / 60);
-    const daysAgo = Math.floor(hoursAgo / 24);
-    const monthsAgo = Math.floor(daysAgo / 30.437); //average number of days in a month
-    const yearsAgo = Math.floor(monthsAgo / 12);
+      const timeDifference = currentDate - commentDate;
 
-    if (yearsAgo > 0) {
-      if (yearsAgo === 1) {
-        commentCardDate.innerText = `${yearsAgo} Year Ago`;
+      const minutesAgo = Math.floor(timeDifference / (1000 * 60));
+      const hoursAgo = Math.floor(minutesAgo / 60);
+      const daysAgo = Math.floor(hoursAgo / 24);
+      const monthsAgo = Math.floor(daysAgo / 30.437); //average number of days in a month
+      const yearsAgo = Math.floor(monthsAgo / 12);
+
+      if (yearsAgo > 0) {
+        if (yearsAgo === 1) {
+          commentCardDate.innerText = `${yearsAgo} Year Ago`;
+        } else {
+          commentCardDate.innerText = `${yearsAgo} Years Ago`;
+        }
+      } else if (monthsAgo > 0) {
+        if (monthsAgo === 1) {
+          commentCardDate.innerText = `${monthsAgo} Month Ago`;
+        } else {
+          commentCardDate.innerText = `${monthsAgo} Months Ago`;
+        }
+      } else if (daysAgo > 0) {
+        if (daysAgo === 1) {
+          commentCardDate.innerText = `${daysAgo} Day Ago`;
+        } else {
+          commentCardDate.innerText = `${daysAgo} Days Ago`;
+        }
+      } else if (hoursAgo > 0) {
+        if (hoursAgo === 1) {
+          commentCardDate.innerText = `${hoursAgo} Hour Ago`;
+        } else {
+          commentCardDate.innerText = `${hoursAgo} Hours Ago`;
+        }
+      } else if (minutesAgo > 0) {
+        if (minutesAgo === 1) {
+          commentCardDate.innerText = `${minutesAgo} Minute Ago`;
+        } else {
+          commentCardDate.innerText = `${minutesAgo} Minutes Ago`;
+        }
       } else {
-        commentCardDate.innerText = `${yearsAgo} Years Ago`;
+        commentCardDate.innerText = `Just Now`;
       }
-    } else if (monthsAgo > 0) {
-      if (monthsAgo === 1) {
-        commentCardDate.innerText = `${monthsAgo} Month Ago`;
-      } else {
-        commentCardDate.innerText = `${monthsAgo} Months Ago`;
-      }
-    } else if (daysAgo > 0) {
-      if (daysAgo === 1) {
-        commentCardDate.innerText = `${daysAgo} Day Ago`;
-      } else {
-        commentCardDate.innerText = `${daysAgo} Days Ago`;
-      }
-    } else if (hoursAgo > 0) {
-      if (hoursAgo === 1) {
-        commentCardDate.innerText = `${hoursAgo} Hour Ago`;
-      } else {
-        commentCardDate.innerText = `${hoursAgo} Hours Ago`;
-      }
-    } else if (minutesAgo > 0) {
-      if (minutesAgo === 1) {
-        commentCardDate.innerText = `${minutesAgo} Minute Ago`;
-      } else {
-        commentCardDate.innerText = `${minutesAgo} Minutes Ago`;
-      }
-    } else {
-      commentCardDate.innerText = `Just Now`;
+
+      /*
+       * End of dynamic date calculation.
+       */
+
+      let commentCardText = document.createElement("p");
+      commentCardText.classList.add("comment__text");
+      commentCardText.innerText = filledComments[i].comment;
+
+      let commentRightBottom = document.createElement("div");
+      commentRightBottom.classList.add("comment__right-bottom");
+
+      let commentLikeButton = document.createElement("button");
+      commentLikeButton.classList.add("comment__like");
+      commentLikeButton.innerText = "Like";
+
+      let commentDeleteButton = document.createElement("button");
+      commentDeleteButton.classList.add("comment__delete");
+      commentDeleteButton.innerText = "Delete";
+
+      let commentLikeCount = document.createElement("p");
+      commentLikeCount.classList.add("comment__like-count");
+      commentLikeCount.innerText = `Likes: ${filledComments[i].likes}`;
+
+      commentCard.appendChild(commentCardLeft);
+      commentCard.appendChild(commentCardRight);
+
+      commentCardLeft.appendChild(commentProfile);
+
+      commentCardRight.appendChild(commentCardRightTop);
+      commentCardRight.appendChild(commentCardText);
+      commentCardRight.appendChild(commentRightBottom);
+
+      commentRightBottom.appendChild(commentLikeButton);
+      commentRightBottom.appendChild(commentDeleteButton);
+      commentRightBottom.appendChild(commentLikeCount);
+
+      commentCardRightTop.appendChild(commentCardName);
+      commentCardRightTop.appendChild(commentCardDate);
+
+      commentsSection.appendChild(commentCard);
     }
-
-    /*
-     * End of dynamic date calculation.
-     */
-
-    let commentCardText = document.createElement("p");
-    commentCardText.classList.add("comment__text");
-    commentCardText.innerText = filledComments[i].comment;
-
-    let commentRightBottom = document.createElement("div");
-    commentRightBottom.classList.add("comment__right-bottom");
-
-    let commentLikeButton = document.createElement("button");
-    commentLikeButton.classList.add("comment__like");
-    commentLikeButton.innerText = "Like";
-
-    let commentDeleteButton = document.createElement("button");
-    commentDeleteButton.classList.add("comment__delete");
-    commentDeleteButton.innerText = "Delete";
-
-    let commentLikeCount = document.createElement("p");
-    commentLikeCount.classList.add("comment__like-count");
-    commentLikeCount.innerText = `Likes: ${filledComments[i].likes}`;
-
-    commentCard.appendChild(commentCardLeft);
-    commentCard.appendChild(commentCardRight);
-
-    commentCardLeft.appendChild(commentProfile);
-
-    commentCardRight.appendChild(commentCardRightTop);
-    commentCardRight.appendChild(commentCardText);
-    commentCardRight.appendChild(commentRightBottom);
-
-    commentRightBottom.appendChild(commentLikeButton);
-    commentRightBottom.appendChild(commentDeleteButton);
-    commentRightBottom.appendChild(commentLikeCount);
-
-    commentCardRightTop.appendChild(commentCardName);
-    commentCardRightTop.appendChild(commentCardDate);
-
-    commentsSection.appendChild(commentCard);
+  } catch {
+    console.log(
+      "Error getting information from server, please try again later"
+    );
   }
 }
 
@@ -151,22 +160,28 @@ commentForm.addEventListener("submit", async function (event) {
   };
 
   if ((newComment.commentName != "") & (newComment.commentText != "")) {
-    const response = await apiConnection.postComment({
-      name: newComment.commentName,
-      comment: newComment.commentText,
-    });
-    getComments().then(() => {
-      likeComment().then(() => {
-        deleteComment();
+    try {
+      const response = await apiConnection.postComment({
+        name: newComment.commentName,
+        comment: newComment.commentText,
       });
-    });
-    commentForm.reset();
+      getComments().then(() => {
+        likeComment().then(() => {
+          deleteComment();
+        });
+      });
+      commentForm.reset();
 
-    nameInput.classList.remove("form__name--error");
-    nameInput.placeholder = "Enter Your Name";
+      nameInput.classList.remove("form__name--error");
+      nameInput.placeholder = "Enter Your Name";
 
-    textInput.classList.remove("form__comment--error");
-    textInput.placeholder = "Add a New Comment";
+      textInput.classList.remove("form__comment--error");
+      textInput.placeholder = "Add a New Comment";
+    } catch {
+      console.log(
+        "Error getting information from server, please try again later."
+      );
+    }
   } else if ((newComment.commentName == "") & (newComment.commentText == "")) {
     nameInput.classList.add("form__name--error");
     nameInput.placeholder = "Please Add Your Name";
@@ -190,11 +205,21 @@ async function likeComment() {
   for (let i = 0; i < commentLikeButtons.length; i++) {
     commentLikeButtons[i].addEventListener("click", async function (event) {
       const commentLike = await apiConnection.commentLike(response[i].id);
+
+      // const commentsReponse = await getComments();
+
       getComments().then(() => {
         likeComment().then(() => {
           deleteComment();
         });
       });
+
+      // getComments().then((response) => {
+      //  return likeComment()
+      // }).then((response)=>{
+      //   return   deleteComment();
+      // }).then((response)=>{
+      // });
     });
   }
 }
@@ -216,6 +241,9 @@ async function deleteComment() {
     });
   }
 }
+
+//Ensure like and delete functionality works at page load
+//-------------------------------------------
 
 getComments().then(() => {
   likeComment().then(() => {
