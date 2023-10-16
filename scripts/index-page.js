@@ -165,11 +165,12 @@ commentForm.addEventListener("submit", async function (event) {
         name: newComment.commentName,
         comment: newComment.commentText,
       });
-      getComments().then(() => {
-        likeComment().then(() => {
-          deleteComment();
-        });
-      });
+
+      //Like and delete functionality
+      const commentsResponse = await getComments();
+      const likeResponse = await likeComment();
+      const deleteResponse = await deleteComment();
+
       commentForm.reset();
 
       nameInput.classList.remove("form__name--error");
@@ -206,20 +207,10 @@ async function likeComment() {
     commentLikeButtons[i].addEventListener("click", async function (event) {
       const commentLike = await apiConnection.commentLike(response[i].id);
 
-      // const commentsReponse = await getComments();
-
-      getComments().then(() => {
-        likeComment().then(() => {
-          deleteComment();
-        });
-      });
-
-      // getComments().then((response) => {
-      //  return likeComment()
-      // }).then((response)=>{
-      //   return   deleteComment();
-      // }).then((response)=>{
-      // });
+      //Like and delete functionality
+      const commentsResponse = await getComments();
+      const likeResponse = await likeComment();
+      const deleteResponse = await deleteComment();
     });
   }
 }
@@ -233,11 +224,11 @@ async function deleteComment() {
   for (let i = 0; i < commentDeleteButtons.length; i++) {
     commentDeleteButtons[i].addEventListener("click", async function (event) {
       const commentDelete = await apiConnection.commentDelete(response[i].id);
-      getComments().then(() => {
-        likeComment().then(() => {
-          deleteComment();
-        });
-      });
+
+      //Like and delete functionality
+      const commentsResponse = await getComments();
+      const likeResponse = await likeComment();
+      const deleteResponse = await deleteComment();
     });
   }
 }
@@ -245,8 +236,10 @@ async function deleteComment() {
 //Ensure like and delete functionality works at page load
 //-------------------------------------------
 
-getComments().then(() => {
-  likeComment().then(() => {
-    deleteComment();
-  });
-});
+async function populatePage() {
+  const commentsResponse = await getComments();
+  const likeResponse = await likeComment();
+  const deleteResponse = await deleteComment();
+}
+
+populatePage();
