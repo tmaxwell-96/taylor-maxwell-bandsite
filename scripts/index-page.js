@@ -13,6 +13,56 @@ const URL = "https://project-1-api.herokuapp.com/";
 
 let apiConnection = new BandSiteAPI(apiKey);
 
+//Functions
+//-------------------------------------------
+
+function calculateTimeAgo(timestamp) {
+  const currentDate = new Date();
+  const commentDate = new Date(timestamp);
+
+  const timeDifference = currentDate - commentDate;
+
+  const minutesAgo = Math.floor(timeDifference / (1000 * 60));
+  const hoursAgo = Math.floor(minutesAgo / 60);
+  const daysAgo = Math.floor(hoursAgo / 24);
+  const monthsAgo = Math.floor(daysAgo / 30.437); //average number of days in a month
+  const yearsAgo = Math.floor(monthsAgo / 12);
+
+  if (yearsAgo > 0) {
+    if (yearsAgo === 1) {
+      return `${yearsAgo} Year Ago`;
+    } else {
+      return `${yearsAgo} Years Ago`;
+    }
+  } else if (monthsAgo > 0) {
+    if (monthsAgo === 1) {
+      return `${monthsAgo} Month Ago`;
+    } else {
+      return `${monthsAgo} Months Ago`;
+    }
+  } else if (daysAgo > 0) {
+    if (daysAgo === 1) {
+      return `${daysAgo} Day Ago`;
+    } else {
+      commentCardDate.innerText = `${daysAgo} Days Ago`;
+    }
+  } else if (hoursAgo > 0) {
+    if (hoursAgo === 1) {
+      return `${hoursAgo} Hour Ago`;
+    } else {
+      return `${hoursAgo} Hours Ago`;
+    }
+  } else if (minutesAgo > 0) {
+    if (minutesAgo === 1) {
+      return `${minutesAgo} Minute Ago`;
+    } else {
+      return `${minutesAgo} Minutes Ago`;
+    }
+  } else {
+    return `Just Now`;
+  }
+}
+
 function displayComments(comment) {
   let commentCard = document.createElement("div");
   commentCard.classList.add("comment");
@@ -33,59 +83,7 @@ function displayComments(comment) {
 
   let commentCardDate = document.createElement("p");
   commentCardDate.classList.add("comment__date");
-
-  /*
-   * Start of dynamic date calculation
-   */
-
-  const currentDate = new Date();
-  const commentDate = new Date(comment.timestamp);
-
-  const timeDifference = currentDate - commentDate;
-
-  const minutesAgo = Math.floor(timeDifference / (1000 * 60));
-  const hoursAgo = Math.floor(minutesAgo / 60);
-  const daysAgo = Math.floor(hoursAgo / 24);
-  const monthsAgo = Math.floor(daysAgo / 30.437); //average number of days in a month
-  const yearsAgo = Math.floor(monthsAgo / 12);
-
-  if (yearsAgo > 0) {
-    if (yearsAgo === 1) {
-      commentCardDate.innerText = `${yearsAgo} Year Ago`;
-    } else {
-      commentCardDate.innerText = `${yearsAgo} Years Ago`;
-    }
-  } else if (monthsAgo > 0) {
-    if (monthsAgo === 1) {
-      commentCardDate.innerText = `${monthsAgo} Month Ago`;
-    } else {
-      commentCardDate.innerText = `${monthsAgo} Months Ago`;
-    }
-  } else if (daysAgo > 0) {
-    if (daysAgo === 1) {
-      commentCardDate.innerText = `${daysAgo} Day Ago`;
-    } else {
-      commentCardDate.innerText = `${daysAgo} Days Ago`;
-    }
-  } else if (hoursAgo > 0) {
-    if (hoursAgo === 1) {
-      commentCardDate.innerText = `${hoursAgo} Hour Ago`;
-    } else {
-      commentCardDate.innerText = `${hoursAgo} Hours Ago`;
-    }
-  } else if (minutesAgo > 0) {
-    if (minutesAgo === 1) {
-      commentCardDate.innerText = `${minutesAgo} Minute Ago`;
-    } else {
-      commentCardDate.innerText = `${minutesAgo} Minutes Ago`;
-    }
-  } else {
-    commentCardDate.innerText = `Just Now`;
-  }
-
-  /*
-   * End of dynamic date calculation.
-   */
+  commentCardDate.innerText = calculateTimeAgo(comment.timestamp);
 
   let commentCardText = document.createElement("p");
   commentCardText.classList.add("comment__text");
@@ -125,8 +123,6 @@ function displayComments(comment) {
   commentsSection.appendChild(commentCard);
 }
 
-//Functions
-//-------------------------------------------
 async function getComments() {
   try {
     const filledComments = await apiConnection.getComments();
@@ -137,9 +133,7 @@ async function getComments() {
       displayComments(filledComments[i]);
     }
   } catch {
-    console.log(
-      "Error getting information from server, please try again later"
-    );
+    alert("Error getting information from server, please try again later");
   }
 }
 
@@ -181,9 +175,7 @@ commentForm.addEventListener("submit", async function (event) {
       textInput.classList.remove("form__comment--error");
       textInput.placeholder = "Add a New Comment";
     } catch {
-      console.log(
-        "Error getting information from server, please try again later."
-      );
+      alert("Error getting information from server, please try again later.");
     }
   } else if ((newComment.commentName == "") & (newComment.commentText == "")) {
     nameInput.classList.add("form__name--error");
@@ -239,9 +231,13 @@ async function deleteComment() {
 //-------------------------------------------
 
 async function populatePage() {
-  const commentsResponse = await getComments();
-  const likeResponse = await likeComment();
-  const deleteResponse = await deleteComment();
+  try {
+    const commentsResponse = await getComments();
+    const likeResponse = await likeComment();
+    const deleteResponse = await deleteComment();
+  } catch {
+    alert("Error getting information from server, please try again later");
+  }
 }
 
 populatePage();
